@@ -1,0 +1,314 @@
+<!DOCTYPE html> <!-- tipo de documento HTML -->
+<html lang="es"> <!-- idioma español -->
+
+<head> <!-- cabecera dnd van los metadatos -->
+    <meta charset="UTF-8" /> <!-- para definir la codificación de caracteres y use caracteres especiales -->
+    <!-- metadatos para hacer la pagina responsive en dispositivos moviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- metadatos SEO description de la pagina para mejor posicionamiento en buscadores -->
+    <meta name="description"
+        content="Yesi Creaciones ofrece servicios de decoración y manualidades, brindando creatividad y materiales de alta calidad para tus proyectos." />
+
+    <!-- meta para palabras clave de busqueda-->    
+    <meta name="keywords" content="decoración, manualidades, artesanía, diseño de interiores, creatividad, font, material, materiales de font, materiales" />
+
+    <!-- meta para el autor de la pagina, importante para SEO y derechos de autor -->
+    <!-- <meta name="author" content="Constructora Solís" /> -->
+
+    <title>Yesi Creaciones | Servicios de Decoración y Manualidades</title> <!-- titulo de la pagina -->
+
+    <!-- LINK para poder usar BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+
+    <!-- LINK para poder usar ICONOS DE la pag FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- LINK para conectar el archivo CSS externo -->
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+
+
+<body> <!-- cuerpo de la pagina -->
+    <div class="layout">
+
+        <!-- menu -->
+        <nav class="sidebar">
+            <a class="logo" href="index.html">
+                <img src="imgs/logoYessyCreaciones.png" alt="Logo de Yesi Creaciones" />
+            </a>
+
+            <!-- Botón hamburguesa (solo visible en móviles) -->
+            <button class="menuToggle" aria-label="Abrir menú">
+                <!-- spans vacios para icono de hamburguesa y jugar transformandolos en x cuando el menu esta desplegado -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="listaMenu">
+                <a href="index.html"><li>Home</li></a>
+                <a href="portfolio.html" class="active"><li>Portfolio</li></a>
+                <a href="contacto.html"><li>Contacto</li></a>
+            </ul>
+        </nav> <!-- fin del menu -->
+
+        <!-- encabezado principal del body-->
+        <header class="hero">
+            <div class="hero-text">
+                <h1>Yesi Creaciones | Servicios de Decoración y Manualidades <i class="fa-solid fa-palette"></i></h1>
+                <p>Experta en decoración y manualidades, a base de font, brindando creatividad y materiales de alta calidad para tus proyectos.</p>
+
+                <a href="">
+                    <button class="btn1 btn-lg">
+                        <i class="fa-solid fa-phone"></i> Contáctame
+                    </button>
+                </a>
+                <a href="">
+                    <button class="btn2 btn-lg btn-lg">
+                        <i class="fa-solid fa-briefcase"></i> Mis Trabajos
+                    </button>
+                </a>
+                
+            </div>
+
+        </header> <!-- fin del encabezado principal -->
+
+        <!-- contenido principal del body-->
+        <main class="main">
+            <!-- el loading lazy es para cargar las imágenes de manera diferida, mejorando el rendimiento de la página -->
+            <figure>
+                <img src="imgs/imgHero1.jpg" alt="Manualidad para aprender numeros" loading="lazy" />
+                <figcaption>Manualidad para aprender números</figcaption>
+            </figure>
+            <figure>
+                <img src="imgs/imgHero2.jpg" alt="Manualidad con los dias de la semana" loading="lazy" />
+                <figcaption>Manualidad con los días de la semana</figcaption>
+            </figure>
+            <figure>
+                <img src="imgs/imgHero3.jpg" alt="Manualidad de asistencia" loading="lazy" />
+                <figcaption>Manualidad de asistencia</figcaption>
+            </figure>
+            <figure>
+                <img src="imgs/imgHero5.png" alt="Manualidad para aprender numeros" loading="lazy" />
+                <figcaption>Material didáctico educativo</figcaption>
+            </figure>
+        </main>
+        <!-- fin del contenido principal -->
+
+        <!-- sección de tarjetas -->
+        <section class="cards">
+
+            <!-- primer bloque de tarjetas ASISTENCIA -->
+            <h2 class="titulo-bloque-cards">Laminas De Asistencia <i class="fa-solid fa-person-walking"></i></h2>            
+            <div class="card">
+                <img src="imgs/Manualidad-Hipopotamo.png" alt="Manualidad de hipopótamo" loading="lazy" />
+                <h4>Asistencia hipopótamo</h4>
+                <em>Variedad de Animales.</em>
+                <em class="precio">$12</em> <br>
+            </div>
+            <div class="card">
+                <img src="imgs/Manualidad-Sirenita-Asistencia.png" alt="Manualidad de sirenita" loading="lazy" />
+                <h4>Asistencia sirenita</h4>
+                <em>Diseño ideal para Kinder y Pre-Kinder</em>
+                <em class="precio">$14</em> <br>
+            </div>
+            <div class="card">
+                <img src="imgs/Manualidad-Casita-Asistencia.png" alt="Manualidad de casita" loading="lazy" />
+                <h4>Asistencia casa y escuela</h4>
+                <em>Ideal para puertas.</em>
+                <em class="precio">$12</em> <br>
+            </div>
+            <div class="card">
+                <img src="imgs/Manualidad-Estudiantes-Asitencia.png" alt="Manualidad de estudiantes" loading="lazy" />
+                <h4>Asistencia estudiantes</h4>
+                <em>Ideal para murales.</em>
+                <em class="precio">$14</em> <br>
+            </div>
+
+            <!-- segundo bloque de tarjetas CUMPLEAÑOS -->
+            <h2 class="titulo-bloque-cards">Laminas De Cumpleaños <i class="fa-solid fa-cake-candles"></i></h2>       
+            <div class="card">
+                <img src="imgs/Manualidad-Cumpleaños.png" alt="Manualidad de cumpleaños" loading="lazy" />
+                <h4>amigos de Cumpleaños</h4>
+                <em>Tamaño aproximado 1 yarda o metro.</em>
+                <em class="precio">$18</em> <br>
+            </div>
+            <div class="card">
+                <img src="imgs/Manualidad-Cumpleaños-Princesa.png" alt="Manualidad de cumpleaños Princesa" loading="lazy" />
+                <h4>Niña Cumpliendo años</h4>
+                <em>Tamaño aproximado 1 yarda o metro.</em>
+                <em class="precio">$20</em> <br>
+            </div>
+            <div class="card">
+                <img src="imgs/Manualidad-Cumpleaños-Pandita.png" alt="Manualidad de cumpleaños Pandita" loading="lazy" />
+                <h4>Pandita</h4>
+                <em>Tamaño aproximado 1 yarda o metro.</em>
+                <em class="precio">$18</em> <br>
+            </div>
+            <div class="card">
+                <img src="imgs/Manualidad-Cumpleaños-Oso.png" alt="Manualidad de cumpleaños Oso" loading="lazy" />
+                <h4>Manualidad de Cumpleaños (oso)</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$18</em> <br>
+            </div>
+
+            <!-- tercer bloque de tarjetas dias de la semana -->
+            <h2 class="titulo-bloque-cards">Laminas Dias de la Semana <i class="fa-solid fa-calendar-day"></i></h2>  
+            <div class="card">
+                <img src="imgs/imgHero2.jpg" alt="Manualidad dias de la semana" loading="lazy" />
+                <h4>Lapices de color</h4>
+                <em>Diseño ideal para Kinder o Pre-Kinder.</em>
+                <em class="precio">$22</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manualidad-Dias-Semana.png" alt="Manualidad dias de la semana lapices" loading="lazy" />
+                <h4>Dias de la semana</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$12</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manuliadad-Dias-Semana-Tren.png" alt="Manualidad dias de la semana tren" loading="lazy" />
+                <h4>Dias de la semana tren</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$23</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manualidad-Dias-Cienpies.png" alt="Manualidad dias de la semana gusanito" loading="lazy" />
+                <h4>Gusanito dias de la semana</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$15</em> <br>
+            </div>   
+
+            <!-- cuarto bloque de tarjetas palabras magicas -->
+            <h2 class="titulo-bloque-cards">Laminas Palabras Magicas <i class="fa-solid fa-wand-magic-sparkles"></i></h2>
+            <div class="card">
+                <img src="imgs/Manuliadad-Palabras-Magicas1.png" alt="Manualidad palabras magicas cortesia y educación" loading="lazy" />
+                <h4>Cortesia y educación</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$12</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manuliadad-Palabras-Magicas2.png" alt="Manualidad palabras magicas cotidianas" loading="lazy" />
+                <h4>Palabras Cotidianas</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$12</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manuliadad-Palabras-Magicas-Amigos.png" alt="Manualidad palabras magicas amigos" loading="lazy" />
+                <h4>Niños</h4>
+                <em>Variedad de Diseños.</em>
+                <em class="precio">$15</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manualidad-Palbras-Magicas-Animalitos.png" alt="Manualidad palabras magicas animalitos" loading="lazy" />
+                <h4>Animalitos</h4>
+                <em>Variedad de Diseños.</em>
+                <em class="precio">$15</em> <br>
+            </div>   
+
+            <!-- Quinto bloque de tarjetas palabras magicas -->
+            <h2 class="titulo-bloque-cards">Laminas de Abecedario <i class="fa-solid fa-a"></i><i class="fa-solid fa-b"></i><i class="fa-solid fa-c"></i></h2>
+            <div class="card">
+                <img src="imgs/Manualidad-Abecedario1.png" alt="Manualidad Abecedario" loading="lazy" />
+                <h4>Abecedario</h4>
+                <em>Tamaño 8 ½ x 6 pulgadas.</em>
+                <em class="precio">$29</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manualidad-Abecedario-Gusanito.png" alt="Manualidad Abecedario Gusanito" loading="lazy" />
+                <h4>Abecedario Gusanito</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$32</em> <br>
+            </div>   
+
+            <!-- sexto bloque de tarjetas palabras magicas -->
+            <h2 class="titulo-bloque-cards">Laminas de Numeros y Cantidad <i class="fa-solid fa-arrow-down-1-9"></i></h2>
+            <div class="card">
+                <img src="imgs/Manualidad-Numeros-Frutas.png" alt="Manualidad Numeros Tematica de Frutas" loading="lazy" />
+                <h4>Tematica de Frutas</h4>
+                <em>Tamaño 8 ½ x 6 pulgadas.</em>
+                <em class="precio">$22</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manualidad-Numeros-Trencito.png" alt="Manualidad Numeros Tematica de Trencito" loading="lazy" />
+                <h4>Numeros del 0 al 9</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$20</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manualidad-Numeros-100-1000.png" alt="Manualidad Numeros del 100 al 1000" loading="lazy" />
+                <h4>Numeros del 100 al 1000</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$22</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/Manualidad-Numeros-Cantidad.png" alt="Manualidad Numeros y cantidad" loading="lazy" />
+                <h4>Numeros y Cantidades</h4>
+                <em>Cada uno va pegado a un palito de madera.</em>
+                <em class="precio">$24</em> <br>
+            </div>   
+            <div class="card">
+                <img src="imgs/imgHero5.png" alt="Manualidad Numeros animalitos" loading="lazy" />
+                <h4>Numeros del 0 al 10-</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$22</em> <br>
+            </div>   
+
+            <!-- septimo bloque de tarjetas palabras magicas -->
+            <h2 class="titulo-bloque-cards">Laminas de Vocales <i class="fa-solid fa-layer-group"></i></h2>
+            <div class="card">
+                <img src="imgs/imgHero5.png" alt="Manualidad Numeros animalitos" loading="lazy" />
+                <h4>Numeros del 0 al 10-</h4>
+                <em>Variedad de diseños.</em>
+                <em class="precio">$22</em> <br>
+            </div>   
+        </section> <!-- fin de la sección de tarjetas -->
+
+        
+        <!-- footer de la pagina -->
+        <footer class="footer">
+            <div class="logoFooter">
+                <img src="imgs/logoYessyCreaciones.png" alt="Logo de Yesi Creaciones" />
+            </div>
+
+            <div class="menuFooter">
+                <h3>Menú:</h3>
+                <a href="index.html"><i class="fa-solid fa-paper-plane"></i> Home</a>
+                <a href="galeria.html"><i class="fa-solid fa-paper-plane"></i> Galería</a>
+                <a href="contacto.html"><i class="fa-solid fa-paper-plane"></i> Contacto</a>
+            </div>
+
+            <div class="horarioFooter">
+                <h3>Horario de atención:</h3>
+                <p>Lunes a Viernes: <br>8:00 AM - 4:00 PM</p>
+            </div>
+
+            <div class="socialFooter">
+                <h3>Sígueme:</h3>
+                <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+                <a href="#"> <i class="fa-brands fa-instagram fa-2x"></i></a>
+            </div>
+
+            <div class="copyrightFooter">
+                <p>© 2025 Yesi Creaciones | Todos los derechos reservados</p>
+            </div>
+        </footer>
+
+    </div> <!-- fin del layout -->
+
+    <!-- este es el enlace al script del menú hamburguesa -->
+    <script src="scripts/menuHamb.js"></script>
+    
+    <!-- Scrip para poder usar BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+</html>

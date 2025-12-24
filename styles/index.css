@@ -1,0 +1,535 @@
+:root {
+    --background-color-hover: #e9aebb;
+    --font-color: #333333;
+    --font-color2: #ffffff;
+    --nav-background-color: #f3c6cf;
+    --background-color: #fff6f3;
+    --btn-color: #f2a7b5;
+}
+
+* {
+    box-sizing: border-box; /* incluyo el padding y border en el tamaño total de los elementos */
+}
+
+body {
+    margin: 0; /* elimino el margen externo de todos los elementos */
+    padding: 0; /* elimino el relleno interno de todos los elementos */
+    font-family: Arial, sans-serif; /* establezco una fuente legible para todo el sitio */
+    background: var(--background-color); /* color de fondo claro para todo el sitio */
+}
+
+.layout {
+    display: grid; /* utilizo grid layout para organizar el contenido */
+    grid-template-columns: 250px 1fr; /* aqui el digo que la primera columna es de 250px y la segunda toma el resto */
+    grid-template-rows: 350px auto auto auto; /* filas con alturas automáticas */
+    grid-template-areas: 
+        "sidebar hero"
+        "sidebar hero"
+        "sidebar main"
+        ". cards"
+        "footer footer";
+    min-height: 100vh; /* aseguro que el layout ocupe al menos toda la altura de la ventana */
+    gap: 20px; /* espacio entre las áreas del grid */
+    padding: 20px; /* espacio interno alrededor del layout */
+    box-sizing: border-box; /* incluyo el padding en el tamaño total del layout */
+}
+
+.logo img {
+    width: 14rem; /* ancho del logo */
+    display: block; /* lo hago un elemento de bloque para que respete el margin auto */
+    margin: 4rem auto; /* centro el logo horizontalmente */
+    transition: all 0.3s ease; /* transición suave para cualquier cambio */
+}
+.logo img:hover {
+    transform: scale(1.1); /* efecto de zoom al pasar el cursor */
+    transition: transform 0.3s ease; /* transición suave para el efecto */
+}
+
+.sidebar {
+    grid-area: sidebar; /* asigno el área del grid para el menú */
+    position: sticky; /* hago que el menú sea sticky */
+    top: 0; /* distancia desde la parte superior cuando es sticky */
+    z-index: 1000; /* z-index alto para que quede por encima de otros elementos */
+    background: var(--nav-background-color); /* color de fondo oscuro para el menú */
+    color: var(--font-color); /* color de fuente claro para el menú */
+    border-radius: 12px; /* bordes redondeados */
+    align-items: stretch; /* centro verticalmente los elementos */
+    overflow: hidden; /* oculto cualquier desbordamiento */
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+}
+.sidebar ul {
+    list-style: none; /* elimino los puntos de la lista */
+    padding: 0; /* elimino el padding por defecto */
+}
+.sidebar ul li {
+    margin: 1rem 0; /* espacio entre los elementos de la lista */
+    cursor: pointer; /* cambio el cursor para indicar que es interactivo */
+    padding: 0.5rem 1rem 0.5rem 2rem; /* espacio a la izquierda para separar el texto del borde */
+    margin: 2rem 0; /* espacio entre los elementos de la lista */
+    transition: all 0.3s ease; /* transición suave para los efectos hover */
+}
+.sidebar ul a {
+    text-decoration: none; /* elimino el subrayado de los enlaces */
+    color: var(--font-color2); /* color de fuente claro para los enlaces */
+    display: block; /* hago que el enlace ocupe todo el espacio del li */
+}   
+.sidebar ul li:hover, .sidebar ul a.active li {
+    background: linear-gradient(to bottom, #e9aebb, #ffb6c1); /* cambio de fondo al pasar el cursor o si es el enlace activo */
+    transform: scale(1.1); /* efecto de zoom al pasar el cursor */
+}
+
+
+/* ===MENU HAMBURGUESA PARA MOVILES === */
+.menuToggle {
+    display: none; /* oculto el boton por defecto */
+    flex-direction: column; /* organizo los spans en columna */
+    justify-content: space-around; /* distribuyo los spans con espacio entre ellos */
+    width: 30px; /* ancho del boton */
+    height: 25px; /* alto del boton */
+    background: transparent; /* le aplico fondo transparente para que no se vea */
+    border: none; /* sin borde */
+    cursor: pointer; /* cursor de mano */
+    padding: 0; /* sin padding */
+    z-index: 1100; /* z-index alto para que quede por encima de otros elementos */
+}
+
+.menuToggle span {
+    width: 100%; /* ancho completo de cada span */
+    height: 3px; /* alto de cada span */
+    background: var(--font-color2); /* color blanco para que se vea en fondo oscuro */
+    border-radius: 10px; /* bordes redondeados */
+    transition: all 0.3s ease; /* transicion suave para las transformaciones */
+}
+
+/* selecciono el primer span dentro del menuToggle cuando tiene la clase active */
+.menuToggle.active span:nth-child(1) { 
+    /* aqui le digo que rote ese span para formar una parte de la x */
+    transform: rotate(45deg) translate(5px, 5px); /* rotacion y traslacion del primer span */
+}
+
+/* selecciono el segundo span dentro del menuToggle cuando tiene la clase active */
+.menuToggle.active span:nth-child(2) {
+    /* aqui le digo que oculte ese span para transformarlo en una X */
+    opacity: 0; /* oculto el segundo span */
+}
+
+/* selecciono el tercer span dentro del menuToggle cuando tiene la clase active */
+.menuToggle.active span:nth-child(3) {
+    /* aqui le digo que rote ese span cruzarlo con el primer span y transformarlo en una X */
+    transform: rotate(-45deg) translate(7px, -7px); /* rotacion y traslacion del tercer span */
+}
+/* === FIN MENU HAMBURGUESA PARA MOVILES === */
+
+
+.hero {
+    grid-area: hero;
+    /* Fondo con overlay para legibilidad */
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/imgHero4.jpeg");
+    background-attachment: fixed; /* para que la img de fondo no se mueva al hacer scroll */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "text person";
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    height: 60vh;
+}
+
+.hero-text {
+    grid-area: text;
+    text-align: center;
+}
+
+.hero-text h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.hero-person {
+    grid-area: person;
+    text-align: center;
+}
+.hero-person img {
+    border-radius: 12px;
+    height: auto;
+}
+
+.hero-person img {
+    max-width: 80%;
+    height: auto;
+}
+.btn1 {
+    background-color: var(--btn-color);
+    color: var(--font-color2);
+    border: 2px solid var(--btn-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+.btn1  a {
+    text-decoration: none;
+}
+.btn1:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+    color: var(--font-color2);
+}
+.btn2 {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: var(--font-color2);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.btn2  a {
+    text-decoration: none;
+}
+.btn2:hover {
+    background-color: var(--btn-color);
+    border: 2px solid var(--btn-color);
+    transform: scale(1.05);
+    color: var(--font-color2);
+}
+
+.main {
+    grid-area: main;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.main figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main figure img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.main figure figcaption {
+    color: var(--font-color);
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px;
+}
+
+.cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    text-align: center;
+}
+
+
+/* contenedor del titulo, la img y slogan */
+.titulo-foto {
+    display: flex; /* para centrar el titulo */
+    justify-content: center; /* centra el contenido horizontalmente */
+    align-content: center; /* centra el contenido verticalmente */
+    gap: 3px; /* espacio entre la img y el titulo */
+    margin: 4rem auto 4rem auto; /* margen superior e inferior */
+    border-bottom: none;
+}
+
+/* contenedor del titulo y eslogan */
+.titulo-foto div {
+    display: flex; /* para centrar el titulo */
+    flex-direction: column; /* para que el titulo y el em esten en columna */
+    text-align: left; /* centra el contenido horizontalmente */
+}
+
+/* eslogan del titulo */
+.titulo-foto em {
+    font-size: 0.7rem; /* tamaño del em */
+    margin-top: 0.3125rem; /* margen superior */
+}
+
+/* img del titulo */
+.img-titulo {
+    width: 4.375rem; /* ancho de la img */
+    height: 4.375rem; /* altura automatico */
+    margin-right: 0.9375rem; /* margen derecho */
+    border-radius: 50%; /* hace la img circular */
+    border: 2px solid var(--color-nav-fondo); /* borde de la img */
+}
+
+
+.btn{
+    background-color: var(--nav-background-color);
+    color: var(--font-color2);
+    border: 2px solid var(--nav-background-color);
+    padding: 10px 20px;
+    margin: 5px;
+}
+.btn:hover {
+    background-color: var(--background-color-hover);
+    border: 2px solid var(--background-color-hover);
+    color: var(--font-color2);
+}
+
+.carousel-inner img {
+    border-radius: 12px;
+    height: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gracias {
+    text-align: center;
+    font-style: italic;
+}
+
+.footer {
+    grid-area: footer;
+    display: grid; /* utilizo grid layout para organizar el contenido */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* aqui el digo que la primera columna es de 250px y la segunda toma el resto */
+    grid-template-rows: auto auto; /* filas con alturas automáticas */
+    grid-template-areas: 
+        "logoFooter horarioFooter menuFooter socialFooter"
+        "copyrightFooter copyrightFooter copyrightFooter copyrightFooter";
+    gap: 1rem; /* espacio entre las áreas del grid */
+    box-sizing: border-box; /* incluyo el padding en el tamaño total del layout */
+    background-color: var(--nav-background-color);
+    color: var(--font-color2);
+    border-radius: 12px;
+    width: 100%;
+}
+
+.logoFooter {
+    grid-area: logoFooter;
+    text-align: center;
+}
+.logoFooter img {
+    margin-top: 3rem;
+    width: 12rem;
+}
+.horarioFooter {
+    grid-area: horarioFooter;
+    text-align: center;
+    margin-top: 3rem;
+}
+.menuFooter {
+    display: flex;
+    flex-direction: column;
+    grid-area: menuFooter;
+    text-align: center;
+    margin-top: 3rem;
+    transition: all 0.3s ease;
+}
+.menuFooter a {
+    color: var(--font-color2);
+    text-decoration: none;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+.menuFooter a:hover, .menuFooter a:focus {
+    color: var(--background-color-hover);
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.socialFooter {
+    grid-area: socialFooter;
+    text-align: center;
+    margin-top: 3rem;
+    transition: all 0.3s ease;
+}
+.socialFooter a {
+    color: var(--font-color2);
+    margin: 0 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.socialFooter a:hover, .socialFooter a:focus {
+    color: var(--background-color-hover);
+    transform: scale(1.2);
+}
+.copyrightFooter {
+    grid-area: copyrightFooter;
+    text-align: center;
+    padding: 1rem;
+    background: var(--background-color-hover);
+    color: white;
+    border-radius: 12px;
+    font-size: 16px;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 600px) {
+
+    /* * {
+        outline: 1px solid red;
+    } */
+    body {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+        "sidebar"
+        "hero"
+        "main"
+        "cards"
+        "footer";
+        box-sizing: border-box;
+        padding: 6px;
+        gap: 10px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "text"
+        "person";
+        height: auto;
+    }
+
+    .hero-person img {
+        max-width: 360px;
+    }
+
+    /* sidebar en mobile */
+    .sidebar {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: 200px;
+        padding: 20px 15px;
+        overflow: hidden;
+        min-height: 120px;
+        z-index: 1200;
+        width: 100%;
+        height: fit-content;
+        border-radius: 20px;
+    }
+
+    .sidebar .logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0;
+        flex-shrink: 0;
+    }
+
+    .sidebar .logo img {
+        width: 12rem;
+    }
+    .sidebar ul li:hover, .sidebar ul a.active li {
+        background: linear-gradient(to bottom, #e9aebb, #ffb6c1); /* cambio de fondo al pasar el cursor o si es el enlace activo */
+        transform: none; /* efecto de zoom al pasar el cursor */
+    }
+
+
+    /* mostrar botón hamburguesa en móvil */
+    .menuToggle {
+        display: flex; /* display flex para que se comporte como flexbox */
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+        flex-shrink: 0;
+    }
+    
+    .sidebar .listaMenu {
+        display: none; /* ocultar el menú por defecto */
+        position: fixed; /* usar fixed para que se abra desde el viewport */
+        top: 220px; /* posición desde la parte superior */
+        left: 200px; /* alineado a la izquierda */
+        width: 100%; /* ancho completo */
+        background: var(--nav-background-color); /* mismo color de fondo que el sidebar */
+        z-index: 1100; /* z-index alto para que quede por encima de otros elementos */
+        padding: 10px 0; /* padding vertical */
+        flex-direction: column; /* organizar items en columna */
+        list-style: none;
+        margin: 0;
+        max-height: calc(100vh - 130px);
+        overflow-y: auto;
+        border-radius: 0 0 20px 20px; /* bordes redondeados solo en la parte inferior */
+    }
+
+    .sidebar .listaMenu li {
+        margin: 0;
+        padding: 15px 20px;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .sidebar .listaMenu a {
+        text-decoration: none;
+        color: var(--font-color2);
+        display: block;
+        width: 100%;
+    }
+
+    .sidebar .listaMenu a.active li {
+        background: var(--background-color-hover);
+    }
+
+    .sidebar .listaMenu.active {
+        display: flex; /* mostrar el menú cuando tiene la clase active */
+    }
+
+    .carousel-inner img {
+        height: 250px;
+        max-height: 250px;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logoFooter"
+            "horarioFooter"
+            "menuFooter"
+            "socialFooter"
+            "."
+            "copyrightFooter";
+        font-size: 14px;
+        width: 100%;
+    }
+}
