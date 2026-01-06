@@ -258,6 +258,15 @@ body {
     text-align: center;
 }
 
+.parrafo-principal{
+    text-align: start;
+}
+.botones-card{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
 /* contenedor del titulo, la img y slogan */
 .titulo-foto {
@@ -280,7 +289,7 @@ body {
 .titulo-foto em {
     font-size: 0.7rem; /* tamaño del em */
     margin-top: 0.3125rem; /* margen superior */
-}
+}   
 
 /* img del titulo */
 .img-titulo {
@@ -298,6 +307,7 @@ body {
     border: 2px solid var(--nav-background-color);
     padding: 10px 20px;
     margin: 5px;
+    width: 12rem;
 }
 .btn:hover {
     background-color: var(--background-color-hover);
@@ -307,7 +317,7 @@ body {
 
 .carousel-inner img {
     border-radius: 12px;
-    height: 400px;
+    height: 990px;
     max-height: 400px;
     object-fit: cover;
     width: 100%;
@@ -459,7 +469,7 @@ body {
     }
 
     .sidebar .logo img {
-        width: 12rem;
+        width: 18rem;
     }
     .sidebar ul li:hover, .sidebar ul a.active li {
         background: linear-gradient(to bottom, #e9aebb, #ffb6c1); /* cambio de fondo al pasar el cursor o si es el enlace activo */
@@ -514,6 +524,10 @@ body {
 
     .sidebar .listaMenu.active {
         display: flex; /* mostrar el menú cuando tiene la clase active */
+    }
+
+    .botones-card {
+        flex-direction: column;
     }
 
     .carousel-inner img {

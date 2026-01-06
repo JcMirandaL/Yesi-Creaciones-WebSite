@@ -176,6 +176,7 @@ body {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+    width: 11rem;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     text-decoration: none;
 }
@@ -195,6 +196,7 @@ body {
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 16px;
+    width: 11rem;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
@@ -259,7 +261,14 @@ body {
 .card h2 {
     margin-bottom: 2rem;
 }
-
+.card a {
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.card a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
+}
 
 
 .footer {
@@ -403,7 +412,7 @@ body {
     }
 
     .sidebar .logo img {
-        width: 12rem;
+        width: 18rem;
     }
     .sidebar ul li:hover, .sidebar ul a.active li {
         background: linear-gradient(to bottom, #e9aebb, #ffb6c1); /* cambio de fondo al pasar el cursor o si es el enlace activo */
