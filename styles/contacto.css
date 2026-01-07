@@ -5,7 +5,7 @@
     --nav-background-color: #f3c6cf;
     --background-color: #fff6f3;
     --btn-color: #f2a7b5;
-}
+} /* Variables */
 
 * {
     box-sizing: border-box; /* incluyo el padding y border en el tamaño total de los elementos */
@@ -55,9 +55,9 @@ body {
     border-radius: 12px; /* bordes redondeados */
     align-items: stretch; /* centro verticalmente los elementos */
     overflow: hidden; /* oculto cualquier desbordamiento */
-    display: flex;
-    flex-direction: column;
-    height: 65vh;
+    display: flex; /* uso flexbox para organizar los elementos */
+    flex-direction: column; /* organizo los elementos en columna */
+    height: 65vh; /* altura del sidebar */
 }
 .sidebar ul {
     list-style: none; /* elimino los puntos de la lista */
@@ -124,155 +124,156 @@ body {
 
 
 .hero {
-    grid-area: hero;
+    grid-area: hero; /* asigno el área del grid para el héroe */
     /* Fondo con overlay para legibilidad */
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/imgHero4.jpeg");
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/imgHero4.jpeg"); /* imagen de fondo con overlay oscuro */
     background-attachment: fixed; /* para que la img de fondo no se mueva al hacer scroll */
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 12px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-        "text person";
-    align-items: center;
-    gap: 20px;
-    color: #ffffff;
-    font-weight: bold;
-    height: 60vh;
+    background-position: center; /* centro la imagen de fondo */
+    background-size: cover; /* hago que la imagen de fondo cubra todo el área */
+    background-repeat: no-repeat; /* evito que la imagen de fondo se repita */
+    border-radius: 12px; /* bordes redondeados */
+    padding: 20px; /* espacio interno */
+    display: grid; /* utilizo grid layout para organizar el contenido */
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+    grid-template-areas:  
+        "text person"; /* defino las áreas del grid */
+    align-items: center; /* centro verticalmente los elementos */
+    gap: 20px; /* espacio entre las áreas del grid */
+    color: #ffffff; /* color de fuente blanco para legibilidad */
+    font-weight: bold; /* fuente en negrita para resaltar el texto */
+    height: 60vh; /* altura del héroe */
 }
 
 .hero-text {
-    grid-area: text;
-    text-align: center;
+    grid-area: text; /* asigno el área del grid para el texto */
+    text-align: center; /* centro el texto horizontalmente */
 }
 
 .hero-text h1 {
-    margin: 0 0 10px;
-    font-size: 32px;
-    text-align: center;
+    margin: 0 0 10px; /* margen inferior para separar del párrafo */
+    font-size: 32px; /* tamaño de fuente grande para el título */
+    text-align: center; /* centro el texto */
 }
 
 .hero-person {
-    grid-area: person;
-    text-align: center;
+    grid-area: person; /* asigno el área del grid para la persona */
+    text-align: center; /* centro la imagen horizontalmente */
 }
 .hero-person img {
-    border-radius: 12px;
-    height: auto;
+    border-radius: 12px; /* bordes redondeados */
+    height: auto; /* mantengo la proporción de la imagen */
 }
 
 .hero-person img {
-    max-width: 80%;
-    height: auto;
+    max-width: 80%; /* ajusto el tamaño máximo de la imagen del héroe */
+    height: auto; /* mantengo la proporción de la imagen */
 }
 .btn1 {
-    background-color: var(--btn-color);
-    color: var(--font-color2);
-    border: 2px solid var(--btn-color);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 10rem;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
+    background-color: var(--btn-color); /* color de fondo del botón */
+    color: var(--font-color2); /* color de fuente claro para el botón */
+    border: 2px solid var(--btn-color); /* borde del botón */
+    padding: 10px 20px; /* espacio interno del botón */
+    border-radius: 8px; /* bordes redondeados */
+    font-size: 16px; /* tamaño de fuente del botón */
+    cursor: pointer; /* cambio el cursor para indicar que es interactivo */
+    width: 10rem; /* ancho fijo del botón */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* transición suave para los efectos hover */
+    text-decoration: none; /* elimino el subrayado de los enlaces */
 }
 .btn1  a {
-    text-decoration: none;
+    text-decoration: none; /* elimino el subrayado de los enlaces dentro del botón */
 }
 .btn1:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    transform: scale(1.05);
-    color: var(--font-color2);
+    background-color: rgba(255, 255, 255, 0.2); /* cambio de fondo al pasar el cursor */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* cambio de borde al pasar el cursor */
+    transform: scale(1.05); /* efecto de zoom al pasar el cursor */
+    color: var(--font-color2); /* mantengo el color de fuente claro */
 }
 .btn2 {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    color: var(--font-color2);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    width: 10rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2); /* color de fondo del botón */
+    border: 2px solid rgba(255, 255, 255, 0.8); /* borde del botón */
+    color: var(--font-color2); /* color de fuente claro para el botón */
+    padding: 10px 20px; /* espacio interno del botón */ 
+    border-radius: 8px; /* bordes redondeados */
+    font-size: 16px; /* tamaño de fuente del botón */
+    width: 10rem; /* ancho fijo del botón */
+    cursor: pointer; /* cambio el cursor para indicar que es interactivo */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* transición suave para los efectos hover */
 }
 .btn2  a {
-    text-decoration: none;
+    text-decoration: none; /* elimino el subrayado de los enlaces dentro del botón */
 }
 .btn2:hover {
-    background-color: var(--btn-color);
-    border: 2px solid var(--btn-color);
-    transform: scale(1.05);
-    color: var(--font-color2);
+    background-color: var(--btn-color); /* cambio de fondo al pasar el cursor */ 
+    border: 2px solid var(--btn-color); /* cambio de borde al pasar el cursor */
+    transform: scale(1.05); /* efecto de zoom al pasar el cursor */
+    color: var(--font-color2); /* mantengo el color de fuente claro */
 }
 
 .main {
-    grid-area: main;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-area: main; /* asigno el área del grid para el contenido principal */
+    background: white; /* fondo blanco para el contenido principal */
+    padding: 20px; /* espacio interno */
+    border-radius: 12px; /* bordes redondeados */
+    display: grid; /* utilizo grid layout para organizar el contenido */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* columnas responsivas */
+    gap: 15px; /* espacio entre elementos */
 }
 
 .main figure {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    margin: 0; /* elimino el margen por defecto */
+    display: flex; /* uso flexbox para organizar el contenido */
+    flex-direction: column; /* organizo los elementos en columna */
+    align-items: center; /* centro los elementos horizontalmente */
+    text-align: center; /* centro el texto */
 }
 
 .main figure img {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
+    width: 100%; /* ancho completo de la figura */
+    height: 200px; /* altura fija para las imágenes */
+    border-radius: 10px; /* bordes redondeados */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* sombra para dar profundidad */
+    margin-bottom: 10px; /* espacio inferior */
 }
 
 .main figure figcaption {
-    color: var(--font-color);
-    font-size: 14px;
-    font-weight: 500;
-    padding: 5px;
+    color: var(--font-color); /* color de fuente oscuro para el pie de foto */
+    font-size: 14px; /* tamaño de fuente del pie de foto */
+    font-weight: 500; /* peso de fuente medio */
+    padding: 5px; /* espacio interno */
 }
 
 .cards {
-    grid-area: cards;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-area: cards; /* asigno el área del grid para las tarjetas */
+    display: grid; /* utilizo grid layout para organizar el contenido */
+    /* el minmax hace que las columnas tengan un tamaño mínimo de 250px y un tamaño máximo de 1fr (fracción del espacio disponible) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* el repeat auto-fit hace que las columnas se ajusten automáticamente según el espacio disponible */
+    gap: 20px; /* espacio entre las tarjetas */
+    padding: 20px; /* espacio interno */
 }
 
 .card {
-    background: #ffffff;
-    padding: 50px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
+    background: #ffffff; /* fondo blanco para las tarjetas */
+    padding: 50px; /* espacio interno */
+    border-radius: 12px; /* bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra para dar profundidad */
+    display: flex; /* uso flexbox para organizar el contenido */
 }
 .card h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* espacio inferior */
 }
 .card a {
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* elimino el subrayado de los enlaces */
+    transition: color 0.3s ease, transform 0.3s ease; /* transición suave para los efectos hover */
 }
 .card a:hover {
-    transform: scale(1.1);
-    text-decoration: underline;
+    transform: scale(1.1); /* efecto de zoom al pasar el cursor */
+    text-decoration: underline; /* subrayo el enlace al pasar el cursor */
 }
 
 
 .footer {
-    grid-area: footer;
+    grid-area: footer; /* asigno el área del grid para el footer */
     display: grid; /* utilizo grid layout para organizar el contenido */
     grid-template-columns: 1fr 1fr 1fr 1fr; /* aqui el digo que la primera columna es de 250px y la segunda toma el resto */
     grid-template-rows: auto auto; /* filas con alturas automáticas */
@@ -281,138 +282,138 @@ body {
         "copyrightFooter copyrightFooter copyrightFooter copyrightFooter";
     gap: 1rem; /* espacio entre las áreas del grid */
     box-sizing: border-box; /* incluyo el padding en el tamaño total del layout */
-    background-color: var(--nav-background-color);
-    color: var(--font-color2);
-    border-radius: 12px;
-    width: 100%;
+    background-color: var(--nav-background-color); /* color de fondo oscuro para el footer */
+    color: var(--font-color2); /* color de fuente claro para el footer */
+    border-radius: 12px; /* bordes redondeados */
+    width: 100%; /* ancho completo */
 }
 
 .logoFooter {
-    grid-area: logoFooter;
-    text-align: center;
+    grid-area: logoFooter; /* asigno el área del grid para el logo */
+    text-align: center; /* centro el logo horizontalmente */
 }
 .logoFooter img {
-    margin-top: 3rem;
-    width: 14rem;
+    margin-top: 3rem; /* margen superior */
+    width: 14rem; /* ancho del logo */
 }
 .horarioFooter {
-    grid-area: horarioFooter;
-    text-align: center;
-    margin-top: 3rem;
+    grid-area: horarioFooter; /* asigno el área del grid para el horario */
+    text-align: center; /* centro el texto horizontalmente */
+    margin-top: 3rem; /* margen superior */
 }
 .menuFooter {
-    display: flex;
-    flex-direction: column;
-    grid-area: menuFooter;
-    text-align: center;
-    margin-top: 3rem;
-    transition: all 0.3s ease;
+    display: flex; /* uso flexbox para organizar el contenido */
+    flex-direction: column; /* organizo los elementos en columna */
+    grid-area: menuFooter; /* asigno el área del grid para el menú */
+    text-align: center; /* centro el texto horizontalmente */
+    margin-top: 3rem; /* margen superior */
+    transition: all 0.3s ease; /* transición suave para los efectos hover */
 }
 .menuFooter a {
-    color: var(--font-color2);
-    text-decoration: none;
-    margin: 5px 0;
-    transition: all 0.3s ease;
+    color: var(--font-color2); /* color de fuente claro para los enlaces */
+    text-decoration: none; /* elimino el subrayado de los enlaces */
+    margin: 5px 0; /* espacio entre los enlaces */
+    transition: all 0.3s ease; /* transición suave para los efectos hover */
 }
 .menuFooter a:hover, .menuFooter a:focus {
-    color: var(--background-color-hover);
-    text-decoration: underline;
-    transform: scale(1.1);
+    color: var(--background-color-hover); /* cambio de color al pasar el cursor */
+    text-decoration: underline; /* subrayo el enlace al pasar el cursor */
+    transform: scale(1.1); /* efecto de zoom al pasar el cursor */
 }
 
 .socialFooter {
-    grid-area: socialFooter;
-    text-align: center;
-    margin-top: 3rem;
-    transition: all 0.3s ease;
+    grid-area: socialFooter; /* asigno el área del grid para las redes sociales */
+    text-align: center; /* centro el contenido horizontalmente */
+    margin-top: 3rem; /* margen superior */
+    transition: all 0.3s ease; /* transición suave para los efectos hover */
 }
 .socialFooter a {
-    color: var(--font-color2);
-    margin: 0 10px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    display: inline-block;
+    color: var(--font-color2); /* color de fuente claro para los enlaces */
+    margin: 0 10px; /* espacio entre los enlaces */
+    font-size: 1rem; /* tamaño de fuente para los íconos */
+    transition: all 0.3s ease; /* transición suave para los efectos hover */
+    display: inline-block; /* hago que los enlaces se comporten como elementos inline-block */
 }
 .socialFooter a:hover, .socialFooter a:focus {
-    color: var(--background-color-hover);
-    transform: scale(1.2);
+    color: var(--background-color-hover); /* cambio de color al pasar el cursor */
+    transform: scale(1.2); /* efecto de zoom al pasar el cursor */
 }
 .copyrightFooter {
-    grid-area: copyrightFooter;
-    text-align: center;
-    padding: 1rem;
-    background: var(--background-color-hover);
-    color: white;
-    border-radius: 12px;
-    font-size: 16px;
-    object-fit: contain;
+    grid-area: copyrightFooter; /* asigno el área del grid para el copyright */
+    text-align: center; /* centro el texto horizontalmente */
+    padding: 1rem; /* espacio interno */
+    background: var(--background-color-hover); /* color de fondo al pasar el cursor */
+    color: white; /* color de fuente blanco */
+    border-radius: 12px; /* bordes redondeados */
+    font-size: 16px; /* tamaño de fuente */
+    object-fit: contain; /* mantengo la proporción del contenido */
 }
 
 
-
+/* Media Queries para dispositivos móviles, CUANDO EL ANCHO DE PANTALLA ES MENOR O IGUAL A 600px */
 @media (max-width: 600px) {
 
     /* * {
         outline: 1px solid red;
     } */
     body {
-        box-sizing: border-box;
-        margin: 0;
+        box-sizing: border-box; /* incluyo el padding y border en el tamaño total de los elementos */
+        margin: 0; /* elimino el margen externo de todos los elementos */
     }
 
     .layout {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
+        grid-template-columns: 1fr; /* una sola columna */
+        grid-template-rows: auto auto auto auto; /* filas con alturas automáticas */
+        grid-template-areas: 
         "sidebar"
         "hero"
         "main"
         "cards"
         "footer";
-        box-sizing: border-box;
-        padding: 6px;
-        gap: 10px;
+        box-sizing: border-box; /* incluyo el padding en el tamaño total del layout */
+        padding: 6px; /* espacio interno alrededor del layout */
+        gap: 10px; /* espacio entre las áreas del grid */
     }
 
     .hero {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* una sola columna */
         grid-template-areas:
         "text"
-        "person";
-        height: auto;
+        "person"; 
+        height: auto; /* ajusto la altura automática para que se adapte al contenido */
     }
 
     .hero-person img {
-        max-width: 360px;
+        max-width: 360px; /* ajusto el tamaño máximo de la imagen del héroe */
     }
 
     /* sidebar en mobile */
     .sidebar {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        position: sticky;
-        top: 0;
-        left: 200px;
-        padding: 20px 15px;
-        overflow: hidden;
-        min-height: 120px;
-        z-index: 1200;
-        width: 100%;
-        height: fit-content;
-        border-radius: 20px;
+        flex-direction: column; /* organizo los elementos en columna */
+        justify-content: flex-start; /* alineo los elementos al inicio */
+        align-items: center; /* centro los elementos horizontalmente */
+        position: sticky; /* hago que el menú sea sticky pegajoso arriba */
+        top: 0; /* distancia desde la parte superior cuando es sticky */
+        left: 200px; /* alineado a la izquierda */
+        padding: 20px 15px; /* padding interno */
+        overflow: hidden; /* oculto cualquier desbordamiento */
+        min-height: 120px; /* altura mínima para el sidebar */
+        z-index: 1200; /* z-index alto para que quede por encima de otros elementos */
+        width: 100%; /* ancho completo */
+        height: fit-content; /* altura automática según el contenido */
+        border-radius: 20px; /* bordes redondeados */
     }
 
     .sidebar .logo {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 0;
-        padding: 0;
-        flex-shrink: 0;
+        width: 100%; /* ancho completo del contenedor */
+        text-align: center; /* centro el logo horizontalmente */
+        margin-bottom: 0; /* elimino el margen inferior */
+        padding: 0; /* sin padding */
+        flex-shrink: 0; /* evitar que el logo se reduzca */
     }
 
     .sidebar .logo img {
-        width: 18rem;
+        width: 18rem; /* ancho del logo */
     }
     .sidebar ul li:hover, .sidebar ul a.active li {
         background: linear-gradient(to bottom, #e9aebb, #ffb6c1); /* cambio de fondo al pasar el cursor o si es el enlace activo */
@@ -423,10 +424,10 @@ body {
     /* mostrar botón hamburguesa en móvil */
     .menuToggle {
         display: flex; /* display flex para que se comporte como flexbox */
-        position: absolute;
-        bottom: 20px;
-        right: 15px;
-        flex-shrink: 0;
+        position: absolute; /* posición absoluta para ubicarlo en la esquina */
+        bottom: 20px; /* distancia desde la parte inferior del sidebar */
+        right: 15px; /* distancia desde la parte derecha del sidebar */
+        flex-shrink: 0; /* evitar que el botón se reduzca */
     }
     
     .sidebar .listaMenu {
@@ -447,22 +448,22 @@ body {
     }
 
     .sidebar .listaMenu li {
-        margin: 0;
-        padding: 15px 20px;
-        width: 100%;
-        text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0; /* elimino el margen entre los elementos de la lista */
+        padding: 15px 20px; /* padding para hacer clic más fácil */
+        width: 100%; /* ancho completo */
+        text-align: left; /* alineo el texto a la izquierda */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* separador entre los elementos */
     }
 
     .sidebar .listaMenu a {
-        text-decoration: none;
-        color: var(--font-color2);
-        display: block;
-        width: 100%;
+        text-decoration: none; /* elimino el subrayado de los enlaces */
+        color: var(--font-color2); /* color de fuente claro para los enlaces */
+        display: block; /* hago que el enlace ocupe todo el espacio del li */
+        width: 100%; /* ancho completo */
     }
 
     .sidebar .listaMenu a.active li {
-        background: var(--background-color-hover);
+        background: var(--background-color-hover); /* fondo al estar activo */
     }
 
     .sidebar .listaMenu.active {
@@ -470,15 +471,15 @@ body {
     }
 
     .footer {
-        grid-template-columns: 1fr;
-        grid-template-areas:
+        grid-template-columns: 1fr; /* una sola columna */
+        grid-template-areas: 
             "logoFooter"
             "horarioFooter"
             "menuFooter"
             "socialFooter"
             "."
             "copyrightFooter";
-        font-size: 14px;
-        width: 100%;
+        font-size: 14px; /* tamaño de fuente para el footer */
+        width: 100%; /* ancho completo */
     }
 }
