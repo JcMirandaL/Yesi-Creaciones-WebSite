@@ -301,7 +301,7 @@ body {
 }
 .logoFooter img {
     margin-top: 3rem;
-    width: 12rem;
+    width: 14rem;
 }
 .horarioFooter {
     grid-area: horarioFooter;
@@ -478,7 +478,7 @@ body {
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* una sola columna en mobile */
     }
 
     .footer {
