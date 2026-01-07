@@ -440,7 +440,7 @@ body {
     .sidebar .listaMenu {
         display: none; /* ocultar el menú por defecto */
         position: fixed; /* usar fixed para que se abra desde el viewport */
-        top: 255px; /* posición desde la parte superior */
+        top: 250px; /* posición desde la parte superior */
         left: 200px; /* alineado a la izquierda */
         width: 100%; /* ancho completo */
         background: var(--nav-background-color); /* mismo color de fondo que el sidebar */
