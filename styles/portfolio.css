@@ -244,10 +244,12 @@ body {
 .cards {
     grid-area: cards;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 330px);
     gap: 3rem;
     padding: 20px;
     margin-top: 3rem;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .titulo-bloque-cards {
@@ -265,6 +267,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     text-align: center;
+    width: 350px;
 }
 .card img {
     border-radius: 12px 12px 0 0;
@@ -289,6 +292,7 @@ body {
     color: var(--font-color2);
     border-radius: 12px;
     width: 100%;
+    margin-top: 4rem;
 }
 
 .logoFooter {
@@ -471,6 +475,10 @@ body {
 
     .sidebar .listaMenu.active {
         display: flex; /* mostrar el menú cuando tiene la clase active */
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
     }
 
     .footer {
