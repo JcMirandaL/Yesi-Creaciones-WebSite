@@ -41,7 +41,7 @@ body {
     transition: all 0.3s ease; /* transición suave para cualquier cambio */
 }
 .logo img:hover {
-    transform: scale(1.1); /* efecto de zoom al pasar el cursor */
+    transform: scale(1.05); /* efecto de zoom al pasar el cursor */
     transition: transform 0.3s ease; /* transición suave para el efecto */
 }
 
@@ -54,7 +54,7 @@ body {
     color: var(--font-color); /* color de fuente claro para el menú */
     border-radius: 12px; /* bordes redondeados */
     align-items: stretch; /* centro verticalmente los elementos */
-    overflow: hidden; /* oculto cualquier desbordamiento */
+    overflow: visible; /* permitir que el dropdown se desborde */
     display: flex;
     flex-direction: column;
     height: 65vh;
@@ -75,10 +75,45 @@ body {
     color: var(--font-color2); /* color de fuente claro para los enlaces */
     display: block; /* hago que el enlace ocupe todo el espacio del li */
 }   
-.sidebar ul li:hover, .sidebar ul a.active li {
-    background: linear-gradient(to bottom, #e9aebb, #ffb6c1); /* cambio de fondo al pasar el cursor o si es el enlace activo */
-    transform: scale(1.1); /* efecto de zoom al pasar el cursor */
+.sidebar ul li:not(.dropdown-menu li):hover, .sidebar ul a.active li {
+    background: rgba(255, 255, 255, 0.2); /* cambio de fondo al pasar el cursor o si es el enlace activo */
 }
+
+/* ===DROPDOWN DISEÑOS === */
+.sidebar .nav-item.dropdown {
+    position: relative;
+}
+.sidebar .dropdown-toggle {
+    color: var(--font-color2) !important;
+}
+.sidebar .dropdown-toggle:hover,
+.sidebar .dropdown-toggle:focus,
+.sidebar .dropdown-toggle:active,
+.sidebar .dropdown-toggle.show {
+    color: var(--font-color2) !important;
+    background: rgba(255, 255, 255, 0.2);
+}
+.sidebar .dropdown-menu {
+    background: var(--nav-background-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    min-width: 100%;
+}
+.sidebar .dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+.sidebar .dropdown-menu a {
+    color: var(--font-color2);
+    padding: 0.5rem 1.5rem;
+}
+.sidebar .dropdown-menu a:hover,
+.sidebar .dropdown-menu a:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+/* ===FIN DROPDOWN DISEÑOS === */
 
 
 /* ===MENU HAMBURGUESA PARA MOVILES === */
@@ -126,9 +161,9 @@ body {
 .hero {
     grid-area: hero;
     /* Fondo con overlay para legibilidad */
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/imgHero4.jpeg");
-    background-attachment: fixed; /* para que la img de fondo no se mueva al hacer scroll */
-    background-position: center;
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/heroYee.jpeg");
+    /* background-attachment: fixed; para que la img de fondo no se mueva al hacer scroll */
+    /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 12px;
@@ -196,6 +231,7 @@ body {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
+    margin: 15px;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 .btn2  a {
@@ -239,6 +275,10 @@ body {
     font-size: 14px;
     font-weight: 500;
     padding: 5px;
+}
+
+.main a {
+    text-decoration: none;
 }
 
 .cards {
@@ -372,9 +412,8 @@ body {
     transition: all 0.3s ease;
 }
 .menuFooter a:hover, .menuFooter a:focus {
-    color: var(--background-color-hover);
     text-decoration: underline;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .socialFooter {
@@ -391,8 +430,7 @@ body {
     display: inline-block;
 }
 .socialFooter a:hover, .socialFooter a:focus {
-    color: var(--background-color-hover);
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 .copyrightFooter {
     grid-area: copyrightFooter;
@@ -406,6 +444,37 @@ body {
 }
 
 
+
+/* Botón volver arriba */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: var(--btn-color);
+    color: var(--font-color2);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+    text-decoration: none;
+}
+.scroll-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-top:hover {
+    background: var(--background-color-hover);
+    transform: translateY(-3px);
+}
 
 @media (max-width: 600px) {
 
@@ -433,6 +502,7 @@ body {
 
     .hero {
         grid-template-columns: 1fr;
+        background-position: center;
         grid-template-areas:
         "text"
         "person";
@@ -443,6 +513,13 @@ body {
         max-width: 360px;
     }
 
+    /*para colocar los botones horizontales en el centro de la pantalla en mobile*/
+    .hero-text > a > button {
+        margin: 0 auto;
+        display: inline-block;
+    } 
+    
+
     /* sidebar en mobile */
     .sidebar {
         flex-direction: column;
@@ -452,7 +529,7 @@ body {
         top: 0;
         left: 200px;
         padding: 20px 15px;
-        overflow: hidden;
+        overflow: visible;
         min-height: 120px;
         z-index: 1200;
         width: 100%;
@@ -472,7 +549,7 @@ body {
         width: 18rem;
     }
     .sidebar ul li:hover, .sidebar ul a.active li {
-        background: linear-gradient(to bottom, #e9aebb, #ffb6c1); /* cambio de fondo al pasar el cursor o si es el enlace activo */
+        background: rgba(255, 255, 255, 0.2); /* cambio de fondo al pasar el cursor o si es el enlace activo */
         transform: none; /* efecto de zoom al pasar el cursor */
     }
 
@@ -490,15 +567,15 @@ body {
         display: none; /* ocultar el menú por defecto */
         position: fixed; /* usar fixed para que se abra desde el viewport */
         top: 245px; /* posición desde la parte superior */
-        left: 200px; /* alineado a la izquierda */
-        width: 100%; /* ancho completo */
+        right: 0; /* alineado al inicio del viewport */
+        width: 80%; /* mitad de la pantalla */
         background: var(--nav-background-color); /* mismo color de fondo que el sidebar */
         z-index: 1100; /* z-index alto para que quede por encima de otros elementos */
         padding: 10px 0; /* padding vertical */
         flex-direction: column; /* organizar items en columna */
         list-style: none;
         margin: 0;
-        max-height: calc(100vh - 130px);
+        max-height: calc(100vh - 245px);
         overflow-y: auto;
         border-radius: 0 0 20px 20px; /* bordes redondeados solo en la parte inferior */
     }
@@ -526,6 +603,23 @@ body {
         display: flex; /* mostrar el menú cuando tiene la clase active */
     }
 
+    /* Dropdown en mobile: oculto por defecto, se abre con click */
+    .sidebar .dropdown-menu {
+        position: static !important;
+        background: transparent;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+    }
+    .sidebar .dropdown-menu.show {
+        display: block;
+    }
+    .sidebar .dropdown-menu a {
+        padding: 10px 20px 10px 40px;
+        font-size: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     .botones-card {
         flex-direction: column;
     }
@@ -534,6 +628,16 @@ body {
         height: 250px;
         max-height: 250px;
     }
+
+    .cards {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en mobile */
+        gap: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
     .footer {
         grid-template-columns: 1fr;
         grid-template-areas:

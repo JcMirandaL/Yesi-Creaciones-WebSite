@@ -12,15 +12,16 @@ menuToggle.addEventListener("click", () => {
   listaMenu.classList.toggle("active");
 });
 
-// cerrar menú al hacer clic en un enlace
+// cerrar menú al hacer clic en un enlace (excepto el toggle del dropdown)
 const menuLinks = document.querySelectorAll(".listaMenu a");
-//esta linea es para recorrer todos los enlaces del menu
 menuLinks.forEach((link) => {
-  // agregar evento de clic a cada enlace del menú
-  link.addEventListener("click", () => {
-    // cerrar el menú al hacer clic en un enlace
+  link.addEventListener("click", (e) => {
+    // si es el toggle del dropdown, no cerrar el menú
+    if (link.classList.contains("dropdown-toggle")) {
+      e.preventDefault();
+      return;
+    }
     menuToggle.classList.remove("active");
-    // esta linea es para cerrar el menu al hacer clic en un enlace
     listaMenu.classList.remove("active");
   });
 });
@@ -34,3 +35,28 @@ document.addEventListener("click", (event) => {
     listaMenu.classList.remove("active");
   }
 });
+
+// Botón volver arriba
+const scrollTopBtn = document.querySelector(".scroll-top");
+
+if (scrollTopBtn) {
+  // mostrar/ocultar botón según posición del scroll
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add("visible");
+    } else {
+      scrollTopBtn.classList.remove("visible");
+    }
+  });
+
+  // scroll suave al hero al hacer clic
+  scrollTopBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const hero = document.querySelector(".hero");
+    if (hero) {
+      hero.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  });
+}

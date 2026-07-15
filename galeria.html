@@ -6,28 +6,28 @@
     <!-- metadatos para hacer la pagina responsive en dispositivos moviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://yesicreaciones.vercel.app/portfolio.html" />
+    <link rel="canonical" href="https://yesicreaciones.vercel.app/galeria.html" />
 
     <!-- metadatos SEO description de la pagina para mejor posicionamiento en buscadores -->
     <meta name="description"
-        content="Explora el portfolio de Yesi Creaciones: láminas educativas, asistencias, cumpleaños, abecedarios, números y vocales en foami. Diseños personalizados para aulas y docentes." />
+        content="Explora la galería de Yesi Creaciones: láminas educativas, asistencias, cumpleaños, abecedarios, números y vocales en foami. Diseños personalizados para aulas y docentes." />
 
     <!-- meta para palabras clave de busqueda-->    
-    <meta name="keywords" content="portfolio manualidades, láminas educativas, asistencia escolar, cumpleaños foami, abecedario foami, números y cantidades, vocales, identificadores de puerta, diseños personalizados" />
+    <meta name="keywords" content="galería manualidades, láminas educativas, asistencia escolar, cumpleaños foami, abecedario foami, números y cantidades, vocales, identificadores de puerta, diseños personalizados" />
 
     <!-- meta para el autor de la pagina, importante para SEO y derechos de autor -->
     <!-- <meta name="author" content="Constructora Solís" /> -->
 
-    <title>Portfolio | Yesi Creaciones</title> <!-- titulo de la pagina -->
+    <title>Galería | Yesi Creaciones</title> <!-- titulo de la pagina -->
 
     <!-- Open Graph -->
      <!--para controlar cómo se ve tu página cuando alguien la comparte en WhatsApp, Facebook, Instagram, etc.-->
     <meta property="og:type" content="website" /> <!--Tipo de contenido para redes sociales -->
     <meta property="og:locale" content="es_PA" /> <!-- Idioma y región para redes sociales (español de Panamá) -->
     <meta property="og:site_name" content="Yesi Creaciones" /> <!-- Nombre del sitio para redes sociales -->
-    <meta property="og:title" content="Portfolio | Yesi Creaciones" /> <!-- Título para redes sociales -->
-    <meta property="og:description" content="Explora el portfolio de Yesi Creaciones: láminas educativas, asistencias, cumpleaños, abecedarios, números y vocales en foami. Diseños personalizados para aulas y docentes." /> <!-- Descripción para redes sociales -->
-    <meta property="og:url" content="https://yesicreaciones.vercel.app/portfolio.html" /> <!-- URL canónica de la página -->
+    <meta property="og:title" content="Galería | Yesi Creaciones" /> <!-- Título para redes sociales -->
+    <meta property="og:description" content="Explora la galería de Yesi Creaciones: láminas educativas, asistencias, cumpleaños, abecedarios, números y vocales en foami. Diseños personalizados para aulas y docentes." /> <!-- Descripción para redes sociales -->
+    <meta property="og:url" content="https://yesicreaciones.vercel.app/galeria.html" /> <!-- URL canónica de la página -->
     <!-- La imagen debe ser de al menos 1200x630 píxeles para una buena visualización en redes sociales -->
     <meta property="og:image" content="https://yesicreaciones.vercel.app/imgs/logoYessyCreaciones.png" />
 
@@ -67,7 +67,23 @@
 
             <ul class="listaMenu">
                 <a href="index.html"><li>Home</li></a>
-                <a href="portfolio.html" class="active"><li>Portfolio</li></a>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Diseños
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="asistencia.html">Asistencia</a></li>
+                        <li><a class="dropdown-item" href="cumpleanos.html">Cumpleaños</a></li>
+                        <li><a class="dropdown-item" href="dias-semana.html">Días de la Semana</a></li>
+                        <li><a class="dropdown-item" href="palabras-magicas.html">Palabras Mágicas</a></li>
+                        <li><a class="dropdown-item" href="abecedario.html">Abecedario</a></li>
+                        <li><a class="dropdown-item" href="numeros.html">Números</a></li>
+                        <li><a class="dropdown-item" href="vocales.html">Vocales</a></li>
+                    </ul>
+                </li>
+
+                <a href="galeria.html" class="active"><li>Galería</li></a>
                 <a href="contacto.html"><li>Contacto</li></a>
             </ul>
         </nav> <!-- fin del menu -->
@@ -75,16 +91,16 @@
         <!-- encabezado principal del body-->
         <header class="hero">
             <div class="hero-text">
-                <h1>Portfolio <i class="fa-solid fa-briefcase"></i></h1>
+                <h1>Galería <i class="fa-solid fa-briefcase"></i></h1>
                 <p>Decoración educativa, enfocada en crear material visual llamativo, pensandos para apoyar el
-                    aprendizaje, motivar a los estudiantes y transformar los espacios escolares.</p>
+                    aprendizaje, motivar a los estudiantes y transformar los espacios escolares llenandolos de color y vida.</p>
 
                 <a href="https://wa.me/50763247221?text=Hola%20Yesi%20Creaciones%2C%20me%20gustar%C3%ADa%20cotizar%20un%20trabajo" target="_blank" rel="noopener">
                     <button class="btn1 btn-lg">
                         <i class="fa-solid fa-phone"></i> Contáctanos
                     </button>
                 </a>
-                <a href="portfolio.html">
+                <a href="galeria.html">
                     <button class="btn2 btn-lg btn-lg">
                         <i class="fa-solid fa-briefcase"></i> Mis Trabajos
                     </button>
@@ -96,23 +112,34 @@
 
         <!-- contenido principal del body-->
         <main class="main">
-            <!-- el loading lazy es para cargar las imágenes de manera diferida, mejorando el rendimiento de la página -->
-            <figure>
-                <img src="imgs/imgHero1.jpg" alt="Manualidad para aprender numeros" loading="lazy" />
-                <figcaption>Ideal para aprender números</figcaption>
-            </figure>
-            <figure>
-                <img src="imgs/imgHero2.jpg" alt="Manualidad con los dias de la semana" loading="lazy" />
-                <figcaption>Ideal para aprender los días de la semana</figcaption>
-            </figure>
-            <figure>
-                <img src="imgs/imgHero3.jpg" alt="Manualidad de asistencia" loading="lazy" />
-                <figcaption>Asistencia con animalitos</figcaption>
-            </figure>
-            <figure>
-                <img src="imgs/imgHero5.png" alt="Manualidad para aprender numeros" loading="lazy" />
-                <figcaption>Material didáctico educativo</figcaption>
-            </figure>
+            <a href="asistencia.html#casita">
+                <!-- el loading lazy es para cargar las imágenes de manera diferida, mejorando el rendimiento de la página -->
+                <figure>
+                    <img src="imgs/Manualida-asistencia-Casita.png" alt="Manualidad para decoracion de asistencia" loading="lazy" />
+                    <figcaption>Ideal para decorar el aula</figcaption>
+                </figure>
+            </a>
+
+            <a href="abecedario.html#gusanito">
+                <figure>
+                    <img src="imgs/Manualidad-Abecedario-Gusanito.png" alt="Manualidad con el abecedario" loading="lazy" />
+                    <figcaption>Ideal para aprender el abecedario</figcaption>
+                </figure>
+            </a>
+            
+            <a href="palabras-magicas.html#palabrasMagicas">
+                <figure>
+                    <img src="imgs/Manuliadad-Palabras-Magicas2.png" alt="Manualidad de modales palabras magicas" loading="lazy" />
+                    <figcaption>Ideal para aprender modales</figcaption>
+                </figure>
+            </a>
+            
+            <a href="vocales.html#vocales">
+                <figure>
+                    <img src="imgs/Manualidad-Vocales.png" alt="Manualidad para aprender vocales" loading="lazy" />
+                    <figcaption>Material didáctico educativo</figcaption>
+                </figure>
+            </a>
         </main>
         <!-- fin del contenido principal -->
 
@@ -125,25 +152,21 @@
 
             <div class="card">
                 <img src="imgs/Manualidad-Hipopotamo.png" alt="Manualidad de hipopótamo" loading="lazy" />
-                <h4>Asistencia hipopótamo</h4>
                 <em>Variedad de Animales.</em>
                 <em class="precio">$12</em> <br>
             </div>
             <div class="card">
                 <img src="imgs/Manualidad-Sirenita-Asistencia.png" alt="Manualidad de sirenita" loading="lazy" />
-                <h4>Asistencia sirenita</h4>
                 <em>Diseño ideal para Kinder y Pre-Kinder</em>
                 <em class="precio">$14</em> <br>
             </div>
             <div class="card">
                 <img src="imgs/Manualida-asistencia-Casita.png" alt="Manualidad de casita" loading="lazy" />
-                <h4>Asistencia casa y escuela</h4>
                 <em>Ideal para puertas.</em>
                 <em class="precio">$12</em> <br>
             </div>
             <div class="card">
                 <img src="imgs/Manualidad-Estudiantes-Asitencia.png" alt="Manualidad de estudiantes" loading="lazy" />
-                <h4>Asistencia estudiantes</h4>
                 <em>Ideal para murales.</em>
                 <em class="precio">$12</em> <br>
             </div>
@@ -153,25 +176,21 @@
             <p class="textosTitulos">Porque cada cumple es un gran evento, crea un rincón mágico donde los protagonistas sean ellos. ¡Láminas llenas de color para que nadie se quede sin su festejo! 🎊</p>
             <div class="card">
                 <img src="imgs/Manualidad-Cumpleaños.png" alt="Manualidad de cumpleaños" loading="lazy" />
-                <h4>Amigos de Cumpleaños</h4>
                 <em>Tamaño aproximado 1 yarda o metro.</em>
                 <em class="precio">$18</em> <br>
             </div>
             <div class="card">
                 <img src="imgs/Manualidad-Cumpleaños-Princesa.png" alt="Manualidad de cumpleaños Princesa" loading="lazy" />
-                <h4>Niña Cumpliendo años</h4>
                 <em>Tamaño aproximado 1 yarda o metro.</em>
                 <em class="precio">$18</em> <br>
             </div>
             <div class="card">
                 <img src="imgs/Manualidad-Cumpleaños-Pandita.png" alt="Manualidad de cumpleaños Pandita" loading="lazy" />
-                <h4>Pandita</h4>
                 <em>Tamaño aproximado 1 yarda o metro.</em>
                 <em class="precio">$18</em> <br>
             </div>
             <div class="card">
                 <img src="imgs/Manualidad-Cumpleaños-Oso.png" alt="Manualidad de cumpleaños Oso" loading="lazy" />
-                <h4>Manualidad de Cumpleaños (oso)</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$18</em> <br>
             </div>
@@ -182,25 +201,21 @@
 
             <div class="card">
                 <img src="imgs/imgHero2.jpg" alt="Manualidad dias de la semana" loading="lazy" />
-                <h4>Lapices de color</h4>
                 <em>Diseño ideal para Kinder o Pre-Kinder.</em>
                 <em class="precio">$22</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Dias-Semana.png" alt="Manualidad dias de la semana lapices" loading="lazy" />
-                <h4>Dias de la semana</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$12</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manuliadad-Dias-Semana-Tren.png" alt="Manualidad dias de la semana tren" loading="lazy" />
-                <h4>Dias de la semana tren</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$23</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Dias-Cienpies.png" alt="Manualidad dias de la semana gusanito" loading="lazy" />
-                <h4>Gusanito dias de la semana</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$15</em> <br>
             </div>   
@@ -211,25 +226,21 @@
 
             <div class="card">
                 <img src="imgs/Manuliadad-Palabras-Magicas1.png" alt="Manualidad palabras magicas cortesia y educación" loading="lazy" />
-                <h4>Cortesia y educación</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$12</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manuliadad-Palabras-Magicas2.png" alt="Manualidad palabras magicas cotidianas" loading="lazy" />
-                <h4>Palabras Cotidianas</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$12</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manuliadad-Palabras-Magicas-Amigos.png" alt="Manualidad palabras magicas amigos" loading="lazy" />
-                <h4>Niños</h4>
                 <em>Variedad de Diseños.</em>
                 <em class="precio">$15</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Palbras-Magicas-Animalitos.png" alt="Manualidad palabras magicas animalitos" loading="lazy" />
-                <h4>Animalitos</h4>
                 <em>Variedad de Diseños.</em>
                 <em class="precio">$15</em> <br>
             </div>   
@@ -239,13 +250,11 @@
             <p class="textosTitulos">El primer paso para leer el mundo comienza aquí. Nuestras láminas convierten el abecedario en un viaje visual lleno de color, diseñado para que cada letra sea inolvidable para tus pequeños exploradores. 🌍</p>
             <div class="card">
                 <img src="imgs/Manualidad-Abecedario1.png" alt="Manualidad Abecedario" loading="lazy" />
-                <h4>Abecedario</h4>
                 <em>Tamaño 8 ½ x 6 pulgadas.</em>
                 <em class="precio">$29</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Abecedario-Gusanito.png" alt="Manualidad Abecedario Gusanito" loading="lazy" />
-                <h4>Abecedario Gusanito</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$32</em> <br>
             </div>   
@@ -256,31 +265,26 @@
 
             <div class="card">
                 <img src="imgs/Manualidad-Numeros-Frutas.png" alt="Manualidad Numeros Tematica de Frutas" loading="lazy" />
-                <h4>Tematica de Frutas</h4>
                 <em>Tamaño 8 ½ x 6 pulgadas.</em>
                 <em class="precio">$22</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Numeros-Trencito.png" alt="Manualidad Numeros Tematica de Trencito" loading="lazy" />
-                <h4>Numeros del 0 al 9</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$20</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Numeros-100-1000.png" alt="Manualidad Numeros del 100 al 1000" loading="lazy" />
-                <h4>Numeros del 100 al 1000</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$22</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Numeros-Cantidad.png" alt="Manualidad Numeros y cantidad" loading="lazy" />
-                <h4>Numeros y Cantidades</h4>
                 <em>Cada uno va pegado a un palito de madera.</em>
                 <em class="precio">$24</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/imgHero5.png" alt="Manualidad Numeros animalitos" loading="lazy" />
-                <h4>Numeros del 0 al 10</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$22</em> <br>
             </div>   
@@ -291,25 +295,21 @@
 
             <div class="card">
                 <img src="imgs/Manualidad-Vopcales-Animalitos.png" alt="Manualidad vocales animalitos" loading="lazy" />
-                <h4>Vocales</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$12</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Vocales-Letras.png" alt="Manualidad vocales" loading="lazy" />
-                <h4>Vocales</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$15</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Vocales.png" alt="Manualidad vocales animalitos" loading="lazy" />
-                <h4>Vocales</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$12</em> <br>
             </div>   
             <div class="card">
                 <img src="imgs/Manualidad-Identificador-Puerta.png" alt="Manualidad para identificador de puertas" loading="lazy" />
-                <h4>Identificadores de puerta</h4>
                 <em>Variedad de diseños.</em>
                 <em class="precio">$10</em> <br>
             </div>   
@@ -354,6 +354,11 @@
         </footer>
 
     </div> <!-- fin del layout -->
+
+    <!-- Botón volver arriba -->
+    <a href="#" class="scroll-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
 
     <!-- este es el enlace al script del menú hamburguesa -->
     <script src="scripts/menuHamb.js"></script>
