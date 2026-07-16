@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modalProducto");
     const modalImg = document.getElementById("modalImg");
     const modalLabel = document.getElementById("modalProductoLabel");
-    const modalDescripcion = document.getElementById("modalDescripcion");
     const modalPrecio = document.getElementById("modalPrecio");
     const modalWhatsApp = document.getElementById("modalWhatsApp");
     const modalCompartir = document.getElementById("modalCompartir");
@@ -33,15 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
             // Leo los atributos data-* de la tarjeta clickeada
             const nombre = tarjeta.getAttribute("data-nombre");
             const img = tarjeta.getAttribute("data-img");
-            const desc = tarjeta.getAttribute("data-descripcion");
             const precio = tarjeta.getAttribute("data-precio");
 
             // Lleno los elementos del modal con la info leida
             modalImg.src = img;                    // imagen del producto
             modalImg.alt = nombre;                 // texto alternativo = nombre del producto
             modalLabel.textContent = nombre;       // titulo del modal
-            modalDescripcion.textContent = desc;   // descripcion llamativa
-            modalPrecio.textContent = precio;      // precio destacado
+            modalPrecio.textContent = "Precio: " + precio;  // precio con prefijo centrado
 
             // Genero el link de WhatsApp con un mensaje que incluye el nombre del producto
             // encodeURIComponent convierte espacios y caracteres especiales a formato URL

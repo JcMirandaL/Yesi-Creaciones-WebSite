@@ -96,32 +96,81 @@
             <h2 class="titulo-bloque-cards">Láminas Dias de la Semana <i class="fa-solid fa-calendar-day"></i></h2>
             <p class="textosTitulos">Dale color a la rutina diaria de tus pequeños. Estos diseños ayudan a crear un ambiente atractivo y estimulante en tu institución educativa. 🗓️</p>
 
-            <div class="card" id="lapices">
+            <!-- Tarjeta 1: Lapices — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="lapices"
+                 data-nombre="Lapices de color"
+                 data-img="imgs/imgHero2.jpg"
+                 data-precio="$22"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/imgHero2.jpg" alt="Manualidad dias de la semana" loading="lazy" />
                 <h4>Lapices de color</h4>
-                <em>Diseño ideal para Kinder o Pre-Kinder.</em>
-                <em class="precio">$22</em> <br>
-            </div>   
-            <div class="card">
+            </div>
+
+            <!-- Tarjeta 2: Dias de la semana -->
+            <div class="card"
+                 data-nombre="Dias de la semana"
+                 data-img="imgs/Manualidad-Dias-Semana.png"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Dias-Semana.png" alt="Manualidad dias de la semana lapices" loading="lazy" />
                 <h4>Dias de la semana</h4>
-                <em>Variedad de diseños.</em>
-                <em class="precio">$12</em> <br>
-            </div>   
-            <div class="card">
+            </div>
+
+            <!-- Tarjeta 3: Tren -->
+            <div class="card"
+                 data-nombre="Dias de la semana tren"
+                 data-img="imgs/Manuliadad-Dias-Semana-Tren.png"
+                 data-precio="$23"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manuliadad-Dias-Semana-Tren.png" alt="Manualidad dias de la semana tren" loading="lazy" />
-                <h4>Dias de la semana tren</h4>
-                <em>Variedad de diseños.</em>
-                <em class="precio">$23</em> <br>
-            </div>   
-            <div class="card">
+                <h4>Trencito</h4>
+            </div>
+
+            <!-- Tarjeta 4: Gusanito -->
+            <div class="card"
+                 data-nombre="Gusanito dias de la semana"
+                 data-img="imgs/Manualidad-Dias-Cienpies.png"
+                 data-precio="$15"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Dias-Cienpies.png" alt="Manualidad dias de la semana gusanito" loading="lazy" />
-                <h4>Gusanito dias de la semana</h4>
-                <em>Variedad de diseños.</em>
-                <em class="precio">$15</em> <br>
+                <h4>Gusanito</h4>
             </div>   
 
         </section>
+
+        <!-- Modal Bootstrap — se reutiliza para todas las tarjetas, JS pobla los datos al hacer clic -->
+        <div class="modal fade" id="modalProducto" tabindex="-1"
+             aria-labelledby="modalProductoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- modal-header: titulo + boton cerrar (×) -->
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="modalProductoLabel"></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                    </div>
+                    <!-- modal-body: imagen del producto + precio centrado -->
+                    <div class="modal-body">
+                        <img id="modalImg" src="" alt="" class="modal-producto-img" />
+                        <p class="modal-precio" id="modalPrecio"></p>
+                    </div>
+                    <!-- modal-footer: botones de WhatsApp y Compartir -->
+                    <div class="modal-footer">
+                        <a id="modalWhatsApp" href="" target="_blank" rel="noopener"
+                           class="btn btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                        </a>
+                        <button id="modalCompartir" class="btn btn-compartir">
+                            <i class="fa-solid fa-share-nodes"></i> Compartir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
             <div class="logoFooter">
@@ -164,10 +213,15 @@
         <i class="fa-solid fa-chevron-up"></i>
     </a>
 
+    <!-- menuHamb.js: control del menu hamburguesa y boton scroll-to-top -->
     <script src="scripts/menuHamb.js"></script>
     
+    <!-- Bootstrap bundle: debe cargar ANTES de modal.js porque maneja la apertura/cierre del modal -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- modal.js: logica para poblar el modal con datos del producto al hacer clic en una tarjeta -->
+    <script src="scripts/modal.js"></script>
 </body>
 </html>

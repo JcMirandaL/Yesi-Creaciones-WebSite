@@ -96,20 +96,59 @@
             <h2 class="titulo-bloque-cards">Láminas de Abecedario <i class="fa-solid fa-a"></i><i class="fa-solid fa-b"></i><i class="fa-solid fa-c"></i></h2>
             <p class="textosTitulos">El primer paso para leer el mundo comienza aquí. Nuestras láminas convierten el abecedario en un viaje visual lleno de color, diseñado para que cada letra sea inolvidable para tus pequeños exploradores. 🌍</p>
 
-            <div class="card" id="abecedario2">
+            <!-- Tarjeta 1: Abecedario — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="abecedario2"
+                 data-nombre="Abecedario"
+                 data-img="imgs/Manualidad-Abecedario1.png"
+                 data-precio="$29"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Abecedario1.png" alt="Manualidad Abecedario" loading="lazy" />
                 <h4>Abecedario</h4>
-                <em>Tamaño 8 ½ x 6 pulgadas.</em>
-                <em class="precio">$29</em> <br>
-            </div>   
-            <div class="card" id="gusanito">
+            </div>
+
+            <!-- Tarjeta 2: Abecedario Gusanito — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="gusanito"
+                 data-nombre="Abecedario Gusanito"
+                 data-img="imgs/Manualidad-Abecedario-Gusanito.png"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Abecedario-Gusanito.png" alt="Manualidad Abecedario Gusanito" loading="lazy" />
                 <h4>Abecedario Gusanito</h4>
-                <em>Variedad de diseños.</em>
-                <em class="precio">$32</em> <br>
             </div>   
 
         </section>
+
+        <!-- Modal Bootstrap — se reutiliza para todas las tarjetas, JS pobla los datos al hacer clic -->
+        <div class="modal fade" id="modalProducto" tabindex="-1"
+             aria-labelledby="modalProductoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- modal-header: titulo + boton cerrar (×) -->
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="modalProductoLabel"></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                    </div>
+                    <!-- modal-body: imagen del producto + precio centrado -->
+                    <div class="modal-body">
+                        <img id="modalImg" src="" alt="" class="modal-producto-img" />
+                        <p class="modal-precio" id="modalPrecio"></p>
+                    </div>
+                    <!-- modal-footer: botones de WhatsApp y Compartir -->
+                    <div class="modal-footer">
+                        <a id="modalWhatsApp" href="" target="_blank" rel="noopener"
+                           class="btn btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                        </a>
+                        <button id="modalCompartir" class="btn btn-compartir">
+                            <i class="fa-solid fa-share-nodes"></i> Compartir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
             <div class="logoFooter">
@@ -152,10 +191,15 @@
         <i class="fa-solid fa-chevron-up"></i>
     </a>
 
+    <!-- menuHamb.js: control del menu hamburguesa y boton scroll-to-top -->
     <script src="scripts/menuHamb.js"></script>
     
+    <!-- Bootstrap bundle: debe cargar ANTES de modal.js porque maneja la apertura/cierre del modal -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- modal.js: logica para poblar el modal con datos del producto al hacer clic en una tarjeta -->
+    <script src="scripts/modal.js"></script>
 </body>
 </html>

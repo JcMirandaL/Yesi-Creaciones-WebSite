@@ -96,32 +96,81 @@
             <h2 class="titulo-bloque-cards">Láminas De Cumpleaños <i class="fa-solid fa-cake-candles"></i></h2>
             <p class="textosTitulos">Porque cada cumple es un gran evento, crea un rincón mágico donde los protagonistas sean ellos. ¡Láminas llenas de color para que nadie se quede sin su festejo! 🎊</p>
 
-            <div class="card" id="cumpleanos">
+            <!-- Tarjeta 1: Amigos de Cumpleaños — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="cumpleanos"
+                 data-nombre="Amigos de Cumpleaños"
+                 data-img="imgs/Manualidad-Cumpleaños.png"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Cumpleaños.png" alt="Manualidad de cumpleaños" loading="lazy" />
-                <h4>Amigos de Cumpleaños</h4>
-                <em>Tamaño aproximado 1 yarda o metro.</em>
-                <em class="precio">$18</em> <br>
+                <h4>Cumpleaños (Amigos)</h4>
             </div>
-            <div class="card">
+
+            <!-- Tarjeta 2: Niña Cumpliendo años -->
+            <div class="card"
+                 data-nombre="Niña Cumpliendo años"
+                 data-img="imgs/Manualidad-Cumpleaños-Princesa.png"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Cumpleaños-Princesa.png" alt="Manualidad de cumpleaños Princesa" loading="lazy" />
-                <h4>Niña Cumpliendo años</h4>
-                <em>Tamaño aproximado 1 yarda o metro.</em>
-                <em class="precio">$18</em> <br>
+                <h4>Cumpleaños (Princesa)</h4>
             </div>
-            <div class="card">
+
+            <!-- Tarjeta 3: Pandita -->
+            <div class="card"
+                 data-nombre="Pandita"
+                 data-img="imgs/Manualidad-Cumpleaños-Pandita.png"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Cumpleaños-Pandita.png" alt="Manualidad de cumpleaños Pandita" loading="lazy" />
-                <h4>Pandita</h4>
-                <em>Tamaño aproximado 1 yarda o metro.</em>
-                <em class="precio">$18</em> <br>
+                <h4>Cumpleaños (Pandita)</h4>
             </div>
-            <div class="card">
+
+            <!-- Tarjeta 4: Oso -->
+            <div class="card"
+                 data-nombre="Manualidad de Cumpleaños (oso)"
+                 data-img="imgs/Manualidad-Cumpleaños-Oso.png"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Cumpleaños-Oso.png" alt="Manualidad de cumpleaños Oso" loading="lazy" />
-                <h4>Manualidad de Cumpleaños (oso)</h4>
-                <em>Variedad de diseños.</em>
-                <em class="precio">$18</em> <br>
+                <h4>Cumpleaños (Oso)</h4>
             </div>
 
         </section>
+
+        <!-- Modal Bootstrap — se reutiliza para todas las tarjetas, JS pobla los datos al hacer clic -->
+        <div class="modal fade" id="modalProducto" tabindex="-1"
+             aria-labelledby="modalProductoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- modal-header: titulo + boton cerrar (×) -->
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="modalProductoLabel"></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                    </div>
+                    <!-- modal-body: imagen del producto + precio centrado -->
+                    <div class="modal-body">
+                        <img id="modalImg" src="" alt="" class="modal-producto-img" />
+                        <p class="modal-precio" id="modalPrecio"></p>
+                    </div>
+                    <!-- modal-footer: botones de WhatsApp y Compartir -->
+                    <div class="modal-footer">
+                        <a id="modalWhatsApp" href="" target="_blank" rel="noopener"
+                           class="btn btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                        </a>
+                        <button id="modalCompartir" class="btn btn-compartir">
+                            <i class="fa-solid fa-share-nodes"></i> Compartir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
             <div class="logoFooter">
@@ -164,10 +213,15 @@
         <i class="fa-solid fa-chevron-up"></i>
     </a>
 
+    <!-- menuHamb.js: control del menu hamburguesa y boton scroll-to-top -->
     <script src="scripts/menuHamb.js"></script>
     
+    <!-- Bootstrap bundle: debe cargar ANTES de modal.js porque maneja la apertura/cierre del modal -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- modal.js: logica para poblar el modal con datos del producto al hacer clic en una tarjeta -->
+    <script src="scripts/modal.js"></script>
 </body>
 </html>

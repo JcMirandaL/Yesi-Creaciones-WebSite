@@ -161,9 +161,9 @@ body {
 .hero {
     grid-area: hero;
     /* Fondo con overlay para legibilidad */
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/heroYee.jpeg");
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/heroYeAnimeXl.png");
     /* background-attachment: fixed; para que la img de fondo no se mueva al hacer scroll */
-    /* background-position: center; */
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 12px;
@@ -501,6 +501,8 @@ body {
     }
 
     .hero {
+        background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/heroYeAnime.jpeg"); /* imagen de fondo con overlay oscuro */
+        background-size: cover; /* hago que la imagen de fondo cubra todo el área */
         grid-template-columns: 1fr;
         background-position: center;
         grid-template-areas:

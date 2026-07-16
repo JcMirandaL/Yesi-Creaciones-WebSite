@@ -161,9 +161,9 @@ body {
 .hero {
     grid-area: hero; /* asigno el área del grid para el héroe */
     /* Fondo con overlay para legibilidad */
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/heroYee.jpeg"); /* imagen de fondo con overlay oscuro */
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/heroYeAnimeXl.png"); /* imagen de fondo con overlay oscuro */
     /* background-attachment: fixed; /* para que la img de fondo no se mueva al hacer scroll */
-    /* background-position: center; centro la imagen de fondo */ 
+    background-position: center; /*centro la imagen de fondo */
     background-size: cover; /* hago que la imagen de fondo cubra todo el área */
     background-repeat: no-repeat; /* evito que la imagen de fondo se repita */
     border-radius: 12px; /* bordes redondeados */
@@ -197,12 +197,10 @@ body {
 .hero-person img {
     border-radius: 12px; /* bordes redondeados */
     height: auto; /* mantengo la proporción de la imagen */
+    max-width: 35%; /* ajusto el tamaño máximo de la imagen del héroe */
 }
 
-.hero-person img {
-    max-width: 80%; /* ajusto el tamaño máximo de la imagen del héroe */
-    height: auto; /* mantengo la proporción de la imagen */
-}
+
 .btn1 {
     background-color: var(--btn-color); /* color de fondo del botón */
     color: var(--font-color2); /* color de fuente claro para el botón */
@@ -445,6 +443,8 @@ body {
     }
 
     .hero {
+        background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../imgs/heroYeAnime.jpeg"); /* imagen de fondo con overlay oscuro */
+        background-size: cover; /* hago que la imagen de fondo cubra todo el área */
         grid-template-columns: 1fr; /* una sola columna */
         background-position: center;
         grid-template-areas:

@@ -96,32 +96,81 @@
             <h2 class="titulo-bloque-cards">Láminas Palabras Magicas <i class="fa-solid fa-wand-magic-sparkles"></i></h2>
             <p class="textosTitulos">Un salón que brilla es un salón que usa el respeto. Estas láminas ayudan a los peques a recordar que un "gracias" o un "por favor" pueden abrir puertas y crear grandes amistades. ✨</p>
 
-            <div class="card">
+            <!-- Tarjeta 1: Cortesia y educacion -->
+            <div class="card"
+                 data-nombre="Cortesia y educación"
+                 data-img="imgs/Manuliadad-Palabras-Magicas1.png"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manuliadad-Palabras-Magicas1.png" alt="Manualidad palabras magicas cortesia y educación" loading="lazy" />
                 <h4>Cortesia y educación</h4>
-                <em>Variedad de diseños.</em>
-                <em class="precio">$12</em> <br>
-            </div>   
-            <div class="card" id="palabrasMagicas">
+            </div>
+
+            <!-- Tarjeta 2: Palabras cotidianas — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="palabrasMagicas"
+                 data-nombre="Palabras Cotidianas"
+                 data-img="imgs/Manuliadad-Palabras-Magicas2.png"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manuliadad-Palabras-Magicas2.png" alt="Manualidad palabras magicas cotidianas" loading="lazy" />
                 <h4>Palabras Cotidianas</h4>
-                <em>Variedad de diseños.</em>
-                <em class="precio">$12</em> <br>
-            </div>   
-            <div class="card" id="amigos">
+            </div>
+
+            <!-- Tarjeta 3: Niños — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="amigos"
+                 data-nombre="Niños"
+                 data-img="imgs/Manuliadad-Palabras-Magicas-Amigos.png"
+                 data-precio="$15"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manuliadad-Palabras-Magicas-Amigos.png" alt="Manualidad palabras magicas amigos" loading="lazy" />
                 <h4>Niños</h4>
-                <em>Variedad de Diseños.</em>
-                <em class="precio">$15</em> <br>
-            </div>   
-            <div class="card">
+            </div>
+
+            <!-- Tarjeta 4: Animalitos -->
+            <div class="card"
+                 data-nombre="Animalitos"
+                 data-img="imgs/Manualidad-Palbras-Magicas-Animalitos.png"
+                 data-precio="$15"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Palbras-Magicas-Animalitos.png" alt="Manualidad palabras magicas animalitos" loading="lazy" />
                 <h4>Animalitos</h4>
-                <em>Variedad de Diseños.</em>
-                <em class="precio">$15</em> <br>
             </div>   
 
         </section>
+
+        <!-- Modal Bootstrap — se reutiliza para todas las tarjetas, JS pobla los datos al hacer clic -->
+        <div class="modal fade" id="modalProducto" tabindex="-1"
+             aria-labelledby="modalProductoLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- modal-header: titulo + boton cerrar (×) -->
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="modalProductoLabel"></h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Cerrar"></button>
+                    </div>
+                    <!-- modal-body: imagen del producto + precio centrado -->
+                    <div class="modal-body">
+                        <img id="modalImg" src="" alt="" class="modal-producto-img" />
+                        <p class="modal-precio" id="modalPrecio"></p>
+                    </div>
+                    <!-- modal-footer: botones de WhatsApp y Compartir -->
+                    <div class="modal-footer">
+                        <a id="modalWhatsApp" href="" target="_blank" rel="noopener"
+                           class="btn btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
+                        </a>
+                        <button id="modalCompartir" class="btn btn-compartir">
+                            <i class="fa-solid fa-share-nodes"></i> Compartir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer">
             <div class="logoFooter">
@@ -164,10 +213,15 @@
         <i class="fa-solid fa-chevron-up"></i>
     </a>
 
+    <!-- menuHamb.js: control del menu hamburguesa y boton scroll-to-top -->
     <script src="scripts/menuHamb.js"></script>
     
+    <!-- Bootstrap bundle: debe cargar ANTES de modal.js porque maneja la apertura/cierre del modal -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <!-- modal.js: logica para poblar el modal con datos del producto al hacer clic en una tarjeta -->
+    <script src="scripts/modal.js"></script>
 </body>
 </html>
