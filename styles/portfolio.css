@@ -421,6 +421,7 @@ body {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 1rem;
+    max-height: 300px; /* limitar altura máxima para evitar que se desborde */
 }
 
 /* Texto descriptivo del producto en el modal */
