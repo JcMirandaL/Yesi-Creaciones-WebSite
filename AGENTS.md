@@ -7,8 +7,9 @@ Static website for **Yesi Creaciones** — a Panamanian handmade crafts / educat
 ## Structure
 
 - `index.html` — landing page
-- `portfolio.html` — product gallery
+- `galeria.html` — product gallery
 - `contacto.html` — contact info (WhatsApp link)
+- `categorias.html` - categories of gallery
 - `styles/` — one CSS file per page (`index.css`, `portfolio.css`, `contacto.css`)
 - `scripts/menuHamb.js` — hamburger menu toggle (only JS in the repo)
 - `imgs/` — product and branding images
@@ -37,6 +38,7 @@ Vercel auto-deploys from the repo. Pushing to the default branch triggers a depl
 - Explain concepts as a senior engineer with years of experience mentoring a junior developer.
 - Always explain the reasoning behind decisions.
 - Before making changes, explain why the current implementation does not work, what the issue is, and why the proposed solution addresses it.
+- Don't make changes, install, or run commands without my approval.
 - Do not make assumptions about the codebase. Ask for missing context when necessary.
 - Prefer maintainable, scalable, and production-ready solutions over quick fixes.
 - Consider security, performance, and maintainability in every recommendation.

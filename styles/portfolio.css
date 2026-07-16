@@ -415,6 +415,75 @@ body {
 
 
 
+/* === MODAL DE PRODUCTOS === */
+/* Imagen dentro del modal: ancho completo, bordes redondeados */
+.modal-producto-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Texto descriptivo del producto en el modal */
+.modal-descripcion {
+    font-size: 1rem;
+    line-height: 1.6; /* interlineado amplio para facilitar lectura */
+    color: var(--font-color);
+    margin-bottom: 1rem;
+}
+
+/* Precio destacado: mas grande y con color de acento del sitio */
+.modal-precio {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--btn-color);
+    margin-bottom: 0;
+}
+
+/* Boton WhatsApp: verde oficial de WhatsApp para reconocimiento inmediato */
+.btn-whatsapp {
+    background-color: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* eliminar subrayado del enlace <a> */
+    transition: background-color 0.3s ease;
+}
+.btn-whatsapp:hover {
+    background-color: #1da851;
+    color: #fff;
+}
+
+/* Boton Compartir: usa el color de acento del sitio para consistencia visual */
+.btn-compartir {
+    background-color: var(--btn-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-compartir:hover {
+    background-color: var(--background-color-hover);
+    color: #fff;
+}
+
+/* Cursor pointer en las tarjetas para indicar que son clickeables */
+.card[data-bs-toggle="modal"] {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* Efecto hover: la tarjeta se eleva ligeramente para dar feedback visual */
+.card[data-bs-toggle="modal"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
 /* Botón volver arriba */
 .scroll-top {
     position: fixed;
@@ -596,6 +665,18 @@ body {
 
     .card img {
         height: 200px;
+    }
+
+    /* Modal en mobile: margen reducido y botones apilados verticalmente */
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    .modal-footer {
+        flex-direction: column; /* apilar botones en columna */
+        gap: 0.5rem;
+    }
+    .modal-footer .btn {
+        width: 100%; /* cada boton ocupa todo el ancho */
     }
    
 
