@@ -82,6 +82,7 @@
                         <li><a class="dropdown-item" href="vocales.html">Vocales</a></li>
                         <li><a class="dropdown-item" href="valores.html">Valores</a></li>
                         <li><a class="dropdown-item" href="meses.html">Meses del Año</a></li>
+                        <li><a class="dropdown-item" href="identificadores.html">Identificadores Puertas</a></li>
                     </ul>
                 </li>
 
@@ -264,12 +265,22 @@
                 <img src="imgs/Manualidad-asistencia-elefante.jpeg" alt="Manualidad de elefante" loading="lazy" />
                 <h4>Asistencia elefante</h4>
             </div>
+            <!-- Tarjeta Asistencia: Arbolito -->
+            <div class="card"
+                 data-nombre="Asistencia arbolito"
+                 data-img="imgs/Manualidad-asistencia-arbol.jpeg"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-asistencia-arbol.jpeg" alt="Manualidad de arbolito" loading="lazy" />
+                <h4>Asistencia arbolito</h4>
+            </div>
 
             <!-- segundo bloque de tarjetas CUMPLEAÑOS -->
             <h2 class="titulo-bloque-cards">Láminas De Cumpleaños <i class="fa-solid fa-cake-candles"></i></h2>    
             <p class="textosTitulos">Porque cada cumple es un gran evento, crea un rincón mágico donde los protagonistas sean ellos. ¡Láminas llenas de color para que nadie se quede sin su festejo! 🎊</p>
-            <!-- Tarjeta Cumpleaños 1 -->
-            <div class="card"
+            <!-- Tarjeta Cumpleaños 1: Amigos — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="cumpleanos"
                  data-nombre="Amigos de Cumpleaños"
                  data-img="imgs/Manualidad-Cumpleaños.png"
                  data-precio="$18"
@@ -306,6 +317,66 @@
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Cumpleaños-Oso.png" alt="Manualidad de cumpleaños Oso" loading="lazy" />
+                <h4>Cumpleaños (Oso)</h4>
+            </div>
+            <!-- Tarjeta Cumpleaños 5: Hipopotamo -->
+            <div class="card"
+                 data-nombre="Manualidad de Cumpleaños (hipopotamo)"
+                 data-img="imgs/Manualidad-cumple-hipopotamo.jpeg"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-cumple-hipopotamo.jpeg" alt="Manualidad de cumpleaños Hipopotamo" loading="lazy" />
+                <h4>Cumpleaños (Hipopotamo)</h4>
+            </div>
+            <!-- Tarjeta Cumpleaños 6: Osito -->
+            <div class="card"
+                 data-nombre="Manualidad de Cumpleaños (oso)"
+                 data-img="imgs/Manualidad-cumple-osito.jpeg"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-cumple-osito.jpeg" alt="Manualidad de cumpleaños Oso" loading="lazy" />
+                <h4>Cumpleaños (Oso)</h4>
+            </div>
+            <!-- Tarjeta Cumpleaños 7: Hipopotamo 2 -->
+            <div class="card"
+                 data-nombre="Manualidad de Cumpleaños (hipopotamo)"
+                 data-img="imgs/Manualidad-cumple-hipopotamo2.jpeg"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-cumple-hipopotamo2.jpeg" alt="Manualidad de cumpleaños Hipopotamo" loading="lazy" />
+                <h4>Cumpleaños (Hipopotamo)</h4>
+            </div>
+            <!-- Tarjeta Cumpleaños 8: Osito 2 -->
+            <div class="card"
+                 data-nombre="Manualidad de Cumpleaños (oso)"
+                 data-img="imgs/Manualidad-cumple-osito2.jpeg"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-cumple-osito2.jpeg" alt="Manualidad de cumpleaños Oso" loading="lazy" />
+                <h4>Cumpleaños (Oso)</h4>
+            </div>
+            <!-- Tarjeta Cumpleaños 9: Osito 3 -->
+            <div class="card"
+                 data-nombre="Manualidad de Cumpleaños (oso)"
+                 data-img="imgs/Manualidad-cumple-osito3.jpeg"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-cumple-osito3.jpeg" alt="Manualidad de cumpleaños Oso" loading="lazy" />
+                <h4>Cumpleaños (Oso)</h4>
+            </div>
+            <!-- Tarjeta Cumpleaños 10: Osito 4 -->
+            <div class="card"
+                 data-nombre="Manualidad de Cumpleaños (oso)"
+                 data-img="imgs/Manualidad-cumple-osito4.jpeg"
+                 data-precio="$18"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-cumple-osito4.jpeg" alt="Manualidad de cumpleaños Oso" loading="lazy" />
                 <h4>Cumpleaños (Oso)</h4>
             </div>
 
@@ -354,7 +425,7 @@
                 <h4>Trencito</h4>
             </div>
             <!-- Tarjeta Dias de la Semana: Lapices 2 -->
-            <div class="card"
+            <div class="card" id="lapices"
                  data-nombre="Lapices de color 2"
                  data-img="imgs/Manualidad-dias-lapices2.jpeg"
                  data-precio="$22"
@@ -413,102 +484,165 @@
                 <img src="imgs/Manualidad-dias-sol.jpeg" alt="Manualidad dias de la semana sol" loading="lazy" />
                 <h4>Dias de la semana</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Cienpies -->
+            <!-- Tarjeta Dias de la Semana: Buho -->
             <div class="card"
-                 data-nombre="Dias de la semana cienpies"
-                 data-img="imgs/Manualidad-dias-cienpies2.jpeg"
+                 data-nombre="Dias de la semana Buho"
+                 data-img="imgs/Manualidad-dias-buho.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-dias-cienpies2.jpeg" alt="Manualidad dias de la semana cienpies 2" loading="lazy" />
+                <img src="imgs/Manualidad-dias-buho.jpeg" alt="Manualidad dias de la semana buho" loading="lazy" />
                 <h4>Dias de la semana</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Cabeza del tren -->
+            <!-- Tarjeta Dias de la Semana: Cienpies -->
             <div class="card"
-                 data-nombre="Dias de la cabeza del tren"
+                 data-nombre="Dias de la semana cienpies"
+                 data-img="imgs/Manualidad-dias-cienpies.png"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-dias-cienpies.png" alt="Manualidad dias de la semana cienpies" loading="lazy" />
+                <h4>Dias de la semana</h4>
+            </div>
+
+            <h2 class="titulo-bloque-cards">Juego completo por $32 <i class="fa-solid fa-calendar-day"></i></h2>
+
+            <!-- Tarjeta Dias de la Semana: Locomotora -->
+            <div class="card"
+                 data-nombre="Juego completo dias de la semana"
                  data-img="imgs/Manualidad-dias-cabezatren.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-dias-cabezatren.jpeg" alt="Manualidad dias de la semana cabeza de tren" loading="lazy" />
-                <h4>Cabeza del tren</h4>
+                <h4>Locomotora</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Lunes -->
+            <!-- Tarjeta Dias de la Semana: Vagón lunes -->
             <div class="card"
-                 data-nombre="Dias de la semana lunes"
+                 data-nombre="Juego completo dias de la semana"
                  data-img="imgs/Manualidad-dias-lunes.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-dias-lunes.jpeg" alt="Manualidad dias de la semana bagon lunes" loading="lazy" />
-                <h4>Vagón tren lunes</h4>
+                <h4>Vagón lunes</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Martes -->
+            <!-- Tarjeta Dias de la Semana: Vagón martes -->
             <div class="card"
-                 data-nombre="Dias de la semana martes"
+                 data-nombre="Juego completo dias de la semana"
                  data-img="imgs/Manualidad-dias-martes.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-dias-martes.jpeg" alt="Manualidad dias de la semana bagon martes" loading="lazy" />
-                <h4>Vagón tren martes</h4>
+                <h4>Vagón martes</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Miercoles -->
+            <!-- Tarjeta Dias de la Semana: Vagón miercoles -->
             <div class="card"
-                 data-nombre="Dias de la semana miercoles"
+                 data-nombre="Juego completo dias de la semana"
                  data-img="imgs/Manualidad-dias-miercoles.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-dias-miercoles.jpeg" alt="Manualidad dias de la semana bagon miercoles" loading="lazy" />
-                <h4>Vagón tren miercoles</h4>
+                <h4>Vagón miercoles</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Jueves -->
+            <!-- Tarjeta Dias de la Semana: Vagón jueves -->
             <div class="card"
-                 data-nombre="Dias de la semana jueves"
+                 data-nombre="Juego completo dias de la semana"
                  data-img="imgs/Manualidad-dias-jueves.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-dias-jueves.jpeg" alt="Manualidad dias de la semana bagon jueves" loading="lazy" />
-                <h4>Vagón tren jueves</h4>
+                <h4>Vagón jueves</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Viernes -->
+            <!-- Tarjeta Dias de la Semana: Vagón viernes -->
             <div class="card"
-                 data-nombre="Dias de la semana viernes"
+                 data-nombre="Juego completo dias de la semana"
                  data-img="imgs/Manualidad-dias-viernes.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-dias-viernes.jpeg" alt="Manualidad dias de la semana bagon viernes" loading="lazy" />
-                <h4>Vagón tren viernes</h4>
+                <h4>Vagón viernes</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Sabado -->
+            <!-- Tarjeta Dias de la Semana: Vagón sabado -->
             <div class="card"
-                 data-nombre="Dias de la semana sabado"
+                 data-nombre="Juego completo dias de la semana"
                  data-img="imgs/Manualidad-dias-sabado.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-dias-sabado.jpeg" alt="Manualidad dias de la semana bagon sabado" loading="lazy" />
-                <h4>Vagón tren sabado</h4>
+                <h4>Vagón sabado</h4>
             </div>
-            <!-- Tarjeta Dias de la Semana: Domingo -->
+            <!-- Tarjeta Dias de la Semana: Vagón domingo -->
             <div class="card"
-                 data-nombre="Dias de la semana domingo"
+                 data-nombre="Juego completo dias de la semana"
                  data-img="imgs/Manualidad-dias-domingo.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-dias-domingo.jpeg" alt="Manualidad dias de la semana bagon domingo" loading="lazy" />
-                <h4>Vagón tren domingo</h4>
+                <h4>Vagón domingo</h4>
             </div>   
 
             <!-- cuarto bloque de tarjetas palabras magicas -->
             <h2 class="titulo-bloque-cards">Láminas Palabras Magicas <i class="fa-solid fa-wand-magic-sparkles"></i></h2>
             <p class="textosTitulos">Un salón que brilla es un salón que usa el respeto. Estas láminas ayudan a los peques a recordar que un "gracias" o un "por favor" pueden abrir puertas y crear grandes amistades. ✨</p>
 
-            <!-- Tarjeta Palabras Mágicas 1: Cortesia -->
+            <!-- Tarjeta Palabras Mágicas: Pulpo -->
+            <div class="card"
+                 data-nombre="Palabras magicas pulpo"
+                 data-img="imgs/Manuliadad-palabras-pulpo.jpeg"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manuliadad-palabras-pulpo.jpeg" alt="Manualidad palabras magicas pulpo" loading="lazy" />
+                <h4>Palabras magicas pulpo</h4>
+            </div>
+            <!-- Tarjeta Palabras Mágicas: Caballito de mar -->
+            <div class="card"
+                 data-nombre="Palabras magicas caballito mar"
+                 data-img="imgs/Manualidad-palabras-caballitoMar.jpeg"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-palabras-caballitoMar.jpeg" alt="Manualidad palabras magicas caballito mar" loading="lazy" />
+                <h4>Palabras magicas caballito mar</h4>
+            </div>
+            <!-- Tarjeta Palabras Mágicas: Buho -->
+            <div class="card"
+                 data-nombre="Palabras magicas buho"
+                 data-img="imgs/Manualidad-palabras-buho.jpeg"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-palabras-buho.jpeg" alt="Manualidad palabras magicas buho" loading="lazy" />
+                <h4>Palabras magicas buho</h4>
+            </div>
+            <!-- Tarjeta Palabras Mágicas: Abejitas -->
+            <div class="card"
+                 data-nombre="Palabras magicas abejitas"
+                 data-img="imgs/Manualidad-palabras-abejita2.jpeg"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-palabras-abejita2.jpeg" alt="Manualidad palabras magicas abejitas" loading="lazy" />
+                <h4>Palabras magicas abejitas</h4>
+            </div>
+            <!-- Tarjeta Palabras Mágicas: Abejas -->
+            <div class="card"
+                 data-nombre="Palabras magicas abejas"
+                 data-img="imgs/Manualidad-palabras-abaejas.jpeg"
+                 data-precio="$12"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-palabras-abaejas.jpeg" alt="Manualidad palabras magicas abejas" loading="lazy" />
+                <h4>Palabras magicas abejas</h4>
+            </div>
+            <!-- Tarjeta Palabras Mágicas: Cortesia y educacion -->
             <div class="card"
                  data-nombre="Cortesia y educación"
                  data-img="imgs/Manuliadad-Palabras-Magicas1.png"
@@ -518,18 +652,18 @@
                 <img src="imgs/Manuliadad-Palabras-Magicas1.png" alt="Manualidad palabras magicas cortesia y educación" loading="lazy" />
                 <h4>Cortesia y educación</h4>
             </div>
-            <!-- Tarjeta Palabras Mágicas 2: Cotidianas -->
-            <div class="card"
+            <!-- Tarjeta Palabras Mágicas: Cotidianas — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="palabrasMagicas"
                  data-nombre="Palabras Cotidianas"
-                 data-img="imgs/Manuliadad-Palabras-Magicas2.png"
+                 data-img="imgs/Manualidad-palabras-cotidianas.jpeg"
                  data-precio="$12"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
-                <img src="imgs/Manuliadad-Palabras-Magicas2.png" alt="Manualidad palabras magicas cotidianas" loading="lazy" />
+                <img src="imgs/Manualidad-palabras-cotidianas.jpeg" alt="Manualidad palabras magicas cotidianas" loading="lazy" />
                 <h4>Palabras Cotidianas</h4>
             </div>
-            <!-- Tarjeta Palabras Mágicas 3: Niños -->
-            <div class="card"
+            <!-- Tarjeta Palabras Mágicas: Niños — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="amigos"
                  data-nombre="Niños"
                  data-img="imgs/Manuliadad-Palabras-Magicas-Amigos.png"
                  data-precio="$15"
@@ -538,7 +672,7 @@
                 <img src="imgs/Manuliadad-Palabras-Magicas-Amigos.png" alt="Manualidad palabras magicas amigos" loading="lazy" />
                 <h4>Niños</h4>
             </div>
-            <!-- Tarjeta Palabras Mágicas 4: Animalitos -->
+            <!-- Tarjeta Palabras Mágicas: Animalitos -->
             <div class="card"
                  data-nombre="Animalitos"
                  data-img="imgs/Manualidad-Palbras-Magicas-Animalitos.png"
@@ -552,8 +686,8 @@
             <!-- Quinto bloque de tarjetas palabras magicas -->
             <h2 class="titulo-bloque-cards">Láminas de Abecedario <i class="fa-solid fa-a"></i><i class="fa-solid fa-b"></i><i class="fa-solid fa-c"></i></h2>
             <p class="textosTitulos">El primer paso para leer el mundo comienza aquí. Nuestras láminas convierten el abecedario en un viaje visual lleno de color, diseñado para que cada letra sea inolvidable para tus pequeños exploradores. 🌍</p>
-            <!-- Tarjeta Abecedario 1 -->
-            <div class="card"
+            <!-- Tarjeta Abecedario 1 — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="abecedario2"
                  data-nombre="Abecedario"
                  data-img="imgs/Manualidad-Abecedario1.png"
                  data-precio="$29"
@@ -562,8 +696,8 @@
                 <img src="imgs/Manualidad-Abecedario1.png" alt="Manualidad Abecedario" loading="lazy" />
                 <h4>Abecedario</h4>
             </div>
-            <!-- Tarjeta Abecedario 2: Gusanito -->
-            <div class="card"
+            <!-- Tarjeta Abecedario 2: Gusanito — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="gusanito"
                  data-nombre="Abecedario Gusanito"
                  data-img="imgs/Manualidad-Abecedario-Gusanito.png"
                  data-precio="$32"
@@ -577,7 +711,17 @@
             <h2 class="titulo-bloque-cards">Láminas de Numeros y Cantidad <i class="fa-solid fa-arrow-down-1-9"></i></h2>
             <p class="textosTitulos">Más que simples números, enseñamos a ver cantidades. Con nuestras láminas, los peques descubrirán el mundo de las matemáticas de forma visual, clara y llena de color. ¡Aprender a contar nunca fue tan fácil! ✨</p>
 
-            <!-- Tarjeta Numeros 1: Frutas -->
+            <!-- Tarjeta Numeros: Frutas 1 — data-* almacena info que JS lee al hacer clic para poblar el modal -->
+            <div class="card"
+                 data-nombre="Tematica de Frutas 1"
+                 data-img="imgs/Manualidad-Cantidades-frutas.jpeg"
+                 data-precio="$22"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-Cantidades-frutas.jpeg" alt="Manualidad Numeros Tematica de Frutas" loading="lazy" />
+                <h4>Tematica de Frutas</h4>
+            </div>
+            <!-- Tarjeta Numeros: Frutas 2 -->
             <div class="card"
                  data-nombre="Tematica de Frutas 2"
                  data-img="imgs/Manualidad-Numeros-Frutas.png"
@@ -587,8 +731,18 @@
                 <img src="imgs/Manualidad-Numeros-Frutas.png" alt="Manualidad Numeros Tematica de Frutas" loading="lazy" />
                 <h4>Tematica de Frutas</h4>
             </div>
-            <!-- Tarjeta Numeros 2: Trencito -->
+            <!-- Tarjeta Numeros: Tematica variada -->
             <div class="card"
+                 data-nombre="Tematica variada"
+                 data-img="imgs/Manualidad-numeros-verduras.jpeg"
+                 data-precio="$22"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-numeros-verduras.jpeg" alt="Manualidad Numeros Tematica Variada" loading="lazy" />
+                <h4>Tematica Variada</h4>
+            </div>
+            <!-- Tarjeta Numeros: Tren 0-9 — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="trencito"
                  data-nombre="Numeros del 0 al 9"
                  data-img="imgs/Manualidad-num-tren-0-10.jpeg"
                  data-precio="$20"
@@ -597,8 +751,7 @@
                 <img src="imgs/Manualidad-num-tren-0-10.jpeg" alt="Manualidad Numeros Tematica de Trencito" loading="lazy" />
                 <h4>Numeros del 0 al 9</h4>
             </div>
-
-            <!-- Tarjeta Numeros 3: 100 al 1000 -->
+            <!-- Tarjeta Numeros: Tren 100-1000 -->
             <div class="card"
                  data-nombre="Numeros del 100 al 1000"
                  data-img="imgs/Manualidad-num-tren-100-1000.jpeg"
@@ -608,56 +761,55 @@
                 <img src="imgs/Manualidad-num-tren-100-1000.jpeg" alt="Manualidad Numeros del 100 al 1000" loading="lazy" />
                 <h4>Numeros del 100 al 1000</h4>
             </div>
-
-            <!-- Tarjeta Numeros 4: Cantidad -->
-            <div class="card"
-                 data-nombre="Tematica de Frutas 1"
-                 data-img="imgs/Manualidad-Cantidades-frutas.jpeg"
+            <!-- Tarjeta Numeros: Pastelillos 2 — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="cantidad"
+                 data-nombre="Pastelillos 2"
+                 data-img="imgs/Manualidad-numeros-pastelillos2.jpeg"
                  data-precio="$24"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-Cantidades-frutas.jpeg" alt="Manualidad Numeros y cantidad con frutas" loading="lazy" />
-                <h4>Numeros y Cantidades</h4>
+                <img src="imgs/Manualidad-numeros-pastelillos2.jpeg" alt="Manualidad Numeros y cantidad pastelillos" loading="lazy" />
+                <h4>Pastelillos del 1 al 10</h4>
             </div>
-            <!-- Tarjeta Numeros 5: Animalitos -->
+            <!-- Tarjeta Numeros: Lapices con manitas -->
             <div class="card"
+                 data-nombre="Lapices con manitas"
+                 data-img="imgs/Manualida-numeros-manitas.jpeg"
+                 data-precio="$24"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualida-numeros-manitas.jpeg" alt="Manualidad Numeros y cantidad lapices con manitas" loading="lazy" />
+                <h4>Lapices con manitas</h4>
+            </div>
+            <!-- Tarjeta Numeros: Pastelillos 1 -->
+            <div class="card"
+                 data-nombre="Pastelillos 1"
+                 data-img="imgs/Manualidad-numeros-pastelillos.jpeg"
+                 data-precio="$24"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-numeros-pastelillos.jpeg" alt="Manualidad Numeros y cantidad pastelillos" loading="lazy" />
+                <h4>Pastelillos del 1 al 10</h4>
+            </div>
+            <!-- Tarjeta Numeros: Oceano — id="mar" se mantiene para compatibilidad -->
+            <div class="card" id="mar"
                  data-nombre="Numeros del 0 al 10"
                  data-img="imgs/imgHero5.png"
                  data-precio="$22"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
-                <img src="imgs/imgHero5.png" alt="Manualidad Numeros animalitos oceanicos" loading="lazy" />
+                <img src="imgs/imgHero5.png" alt="Manualidad Numeros animalitos" loading="lazy" />
                 <h4>Numeros del 0 al 10</h4>
             </div>
-            
-            <div class="card"
-                 data-nombre="Pastelillos 1"
-                 data-img="imgs/Manualidad-numeros-pastelillos.jpeg"
+            <!-- Tarjeta Numeros: Abejas -->
+            <div class="card" id="numerosAbeja"
+                 data-nombre="Numeros del 1 al 10"
+                 data-img="imgs/Manualidad-num-abejas.jpeg"
                  data-precio="$22"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-numeros-pastelillos.jpeg" alt="Manualidad Numeros pastelillos" loading="lazy" />
-                <h4>Numeros del 0 al 10</h4>
-            </div>
-            
-            <div class="card"
-                 data-nombre="Pastelillos 2"
-                 data-img="imgs/Manualidad-numeros-pastelillos2.jpeg"
-                 data-precio="$22"
-                 data-bs-toggle="modal"
-                 data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-numeros-pastelillos2.jpeg" alt="Manualidad Numeros pastelillos" loading="lazy" />
-                <h4>Numeros del 0 al 10</h4>
-            </div>
-            
-            <div class="card"
-                 data-nombre="Tematica variada"
-                 data-img="imgs/Manualidad-numeros-verduras.jpeg"
-                 data-precio="$22"
-                 data-bs-toggle="modal"
-                 data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-numeros-verduras.jpeg" alt="Manualidad Numeros Tematica Variada" loading="lazy" />
-                <h4>Tematica Variada</h4>
+                <img src="imgs/Manualidad-num-abejas.jpeg" alt="Manualidad Numeros abejas" loading="lazy" />
+                <h4>Numeros del 1 al 10</h4>
             </div>
 
             <!-- septimo bloque de tarjetas palabras magicas -->
@@ -683,56 +835,6 @@
                  data-bs-target="#modalProducto">
                 <img src="imgs/Manualidad-Vocales-casitas.jpeg" alt="Manualidad vocales Casitas" loading="lazy" />
                 <h4>Vocales Casitas</h4>
-            </div>
-            <!-- Tarjeta Vocales: Letra A -->
-            <div class="card"
-                 data-nombre="Vocales Letra A"
-                 data-img="imgs/Manualidad-Vocales-a.jpeg"
-                 data-precio="$15"
-                 data-bs-toggle="modal"
-                 data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-Vocales-a.jpeg" alt="Manualidad vocales Letra A" loading="lazy" />
-                <h4>Vocales Letra A</h4>
-            </div>
-            <!-- Tarjeta Vocales: Letra E -->
-            <div class="card"
-                 data-nombre="Vocales Letra E"
-                 data-img="imgs/Manualidad-Vocales-e.jpeg"
-                 data-precio="$15"
-                 data-bs-toggle="modal"
-                 data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-Vocales-e.jpeg" alt="Manualidad vocales Letra E" loading="lazy" />
-                <h4>Vocales Letra E</h4>
-            </div>
-            <!-- Tarjeta Vocales: Letra I -->
-            <div class="card"
-                 data-nombre="Vocales Letra I"
-                 data-img="imgs/Manualidad-Vocales-i.jpeg"
-                 data-precio="$15"
-                 data-bs-toggle="modal"
-                 data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-Vocales-i.jpeg" alt="Manualidad vocales Letra I" loading="lazy" />
-                <h4>Vocales Letra I</h4>
-            </div>
-            <!-- Tarjeta Vocales: Letra O -->
-            <div class="card"
-                 data-nombre="Vocales Letra O"
-                 data-img="imgs/Manualidad-Vocales-o.jpeg"
-                 data-precio="$15"
-                 data-bs-toggle="modal"
-                 data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-Vocales-o.jpeg" alt="Manualidad vocales Letra O" loading="lazy" />
-                <h4>Vocales Letra O</h4>
-            </div>
-            <!-- Tarjeta Vocales: Letra U -->
-            <div class="card"
-                 data-nombre="Vocales Letra U"
-                 data-img="imgs/Manualidad-Vocales-u.jpeg"
-                 data-precio="$15"
-                 data-bs-toggle="modal"
-                 data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-Vocales-u.jpeg" alt="Manualidad vocales Letra U" loading="lazy" />
-                <h4>Vocales Letra U</h4>
             </div>
             <!-- Tarjeta Vocales: Animalitos -->
             <div class="card"
@@ -794,16 +896,419 @@
                 <img src="imgs/Manualidad-Vocales.png" alt="Manualidad vocales animalitos" loading="lazy" />
                 <h4>Vocales</h4>
             </div>
-            <!-- Tarjeta Vocales: Identificadores de puerta -->
+
+            <h2 class="titulo-bloque-cards">Juego completo por $32 <i class="fa-solid fa-layer-group"></i></h2>
+
+            <!-- Tarjeta Vocales: Vocal A -->
             <div class="card"
-                 data-nombre="Identificadores de puerta"
-                 data-img="imgs/Manualidad-Identificador-Puerta.png"
+                 data-nombre="Vocales juego completo"
+                 data-img="imgs/Manualidad-Vocales-a.jpeg"
+                 data-precio="$15"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-Vocales-a.jpeg" alt="Manualidad vocales Letra A" loading="lazy" />
+                <h4>Vocal A</h4>
+            </div>
+            <!-- Tarjeta Vocales: Vocal E -->
+            <div class="card"
+                 data-nombre="Vocales juego completo"
+                 data-img="imgs/Manualidad-Vocales-e.jpeg"
+                 data-precio="$15"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-Vocales-e.jpeg" alt="Manualidad vocales Letra E" loading="lazy" />
+                <h4>Vocal E</h4>
+            </div>
+            <!-- Tarjeta Vocales: Vocal I -->
+            <div class="card"
+                 data-nombre="Vocales juego completo"
+                 data-img="imgs/Manualidad-Vocales-i.jpeg"
+                 data-precio="$15"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-Vocales-i.jpeg" alt="Manualidad vocales Letra I" loading="lazy" />
+                <h4>Vocal I</h4>
+            </div>
+            <!-- Tarjeta Vocales: Vocal O -->
+            <div class="card"
+                 data-nombre="Vocales juego completo"
+                 data-img="imgs/Manualidad-Vocales-o.jpeg"
+                 data-precio="$15"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-Vocales-o.jpeg" alt="Manualidad vocales Letra O" loading="lazy" />
+                <h4>Vocal O</h4>
+            </div>
+            <!-- Tarjeta Vocales: Vocal U -->
+            <div class="card"
+                 data-nombre="Vocales juego completo"
+                 data-img="imgs/Manualidad-Vocales-u.jpeg"
+                 data-precio="$15"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-Vocales-u.jpeg" alt="Manualidad vocales Letra U" loading="lazy" />
+                <h4>Vocal U</h4>
+            </div>   
+
+            <!-- octavo bloque de tarjetas valores -->
+            <h2 class="titulo-bloque-cards">Láminas de Valores <i class="fa-solid fa-heart"></i><i class="fa-solid fa-users"></i></h2>
+            <p class="textosTitulos">El primer paso para leer el mundo comienza aquí. Nuestras láminas convierten los valores en un viaje visual lleno de color, diseñado para que cada valor sea inolvidable para tus pequeños exploradores. 🌍</p>
+
+            <!-- Tarjeta Valores: Niños — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="valores2"
+                 data-nombre="Valores Niños"
+                 data-img="imgs/Manualidad-valores-ninos.jpeg"
+                 data-precio="$29"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-valores-ninos.jpeg" alt="Manualidad Valores Niños" loading="lazy" />
+                <h4>Valores Niños</h4>
+            </div>
+            <!-- Tarjeta Valores: Corazoncitos — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="coranzoncitos"
+                 data-nombre="Valores coranzoncitos"
+                 data-img="imgs/Manualidad-valores-corazoncitos.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-valores-corazoncitos.jpeg" alt="Manualidad Valores Corazoncitos" loading="lazy" />
+                <h4>Valores Corazoncitos</h4>
+            </div>
+            <!-- Tarjeta Valores: Buho — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="valoresBuho"
+                 data-nombre="Valores buho"
+                 data-img="imgs/Manualidad-valores-buho.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-valores-buho.jpeg" alt="Manualidad Valores Buho" loading="lazy" />
+                <h4>Valores Buho</h4>
+            </div>
+
+            <!-- noveno bloque de tarjetas meses del año -->
+            <h2 class="titulo-bloque-cards">Láminas de Meses del Año 📅<i class="fa-solid fa-january"></i><i class="fa-solid fa-february"></i><i class="fa-solid fa-march"></i></h2>
+            <p class="textosTitulos">El primer paso para leer el mundo comienza aquí. Nuestras láminas convierten los meses del año en un viaje visual lleno de color, diseñado para que cada mes sea inolvidable para tus pequeños exploradores. 🌍</p>
+
+            <!-- Tarjeta Meses: Buho — id mantiene para compatibilidad con enlaces existentes -->
+            <div class="card" id="meses"
+                 data-nombre="Meses del año buho"
+                 data-img="imgs/Manulidad-meses-buho.jpeg"
+                 data-precio="$29"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-buho.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Meses del Año buho</h4>
+            </div>
+            <!-- Tarjeta Meses: Buho 2 -->
+            <div class="card"
+                 data-nombre="Meses del año buho 2"
+                 data-img="imgs/Manulidad-meses-buho2.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-buho2.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Meses del Año buho 2</h4>
+            </div>
+
+            <h2 class="titulo-bloque-cards">Juego completo por $32</h2>
+
+            <!-- Tarjeta Meses: Enero -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-enero.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-enero.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Enero</h4>
+            </div>
+            <!-- Tarjeta Meses: Febrero -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-febrero.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-febrero.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Febrero</h4>
+            </div>
+            <!-- Tarjeta Meses: Marzo -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-marzo.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-marzo.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Marzo</h4>
+            </div>
+            <!-- Tarjeta Meses: Abril -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-abril.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-abril.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Abril</h4>
+            </div>
+            <!-- Tarjeta Meses: Mayo -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-mayo.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-mayo.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Mayo</h4>
+            </div>
+            <!-- Tarjeta Meses: Junio -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-junio.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-junio.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Junio</h4>
+            </div>
+            <!-- Tarjeta Meses: Julio -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-julio.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-julio.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Julio</h4>
+            </div>
+            <!-- Tarjeta Meses: Agosto -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-agosto.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-agosto.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Agosto</h4>
+            </div>
+            <!-- Tarjeta Meses: Septiembre -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-septiembre.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-septiembre.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Septiembre</h4>
+            </div>
+            <!-- Tarjeta Meses: Octubre -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-octubre.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-octubre.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Octubre</h4>
+            </div>
+            <!-- Tarjeta Meses: Noviembre -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-noviembre.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-noviembre.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Noviembre</h4>
+            </div>
+            <!-- Tarjeta Meses: Diciembre -->
+            <div class="card"
+                 data-nombre="Meses del año juego completo"
+                 data-img="imgs/Manulidad-meses-diciembre.jpeg"
+                 data-precio="$32"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manulidad-meses-diciembre.jpeg" alt="Manualidad Meses del Año" loading="lazy" />
+                <h4>Diciembre</h4>
+            </div>   
+
+            <!-- decimo bloque de tarjetas identificadores puertas -->
+            <h2 class="titulo-bloque-cards">Láminas de Identificadores <i class="fa-solid fa-door-open"></i></h2>
+            <p class="textosTitulos">Dale personalidad a cada puerta con estos diseños hechos a mano. Ideales para aulas, oficinas o cualquier espacio que quieras hacer único. 🎨</p>
+
+            <div class="card"
+                 data-nombre="Identificador abejita"
+                 data-img="imgs/Manualidad-identificador-abejita.jpeg"
                  data-precio="$10"
                  data-bs-toggle="modal"
                  data-bs-target="#modalProducto">
-                <img src="imgs/Manualidad-Identificador-Puerta.png" alt="Manualidad para identificador de puertas" loading="lazy" />
-                <h4>Identificadores de puerta</h4>
-            </div>   
+                <img src="imgs/Manualidad-identificador-abejita.jpeg" alt="Manualidad identificador abejita" loading="lazy" />
+                <h4>Identificador abejita</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador buho"
+                 data-img="imgs/Manualidad-identificador-buho.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-buho.jpeg" alt="Manualidad identificador buho" loading="lazy" />
+                <h4>Identificador buho</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador globo"
+                 data-img="imgs/Manualidad-identificador-globo.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-globo.jpeg" alt="Manualidad identificador globo" loading="lazy" />
+                <h4>Identificador globo</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador lapiz"
+                 data-img="imgs/Manualidad-identificador-lapiz.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-lapiz.jpeg" alt="Manualidad identificador lapiz" loading="lazy" />
+                <h4>Identificador lapiz</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador libros"
+                 data-img="imgs/Manualidad-identificador-libros.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-libros.jpeg" alt="Manualidad identificador libros" loading="lazy" />
+                <h4>Identificador libros</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador libros 2"
+                 data-img="imgs/Manualidad-identificador-libros2.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-libros2.jpeg" alt="Manualidad identificador libros 2" loading="lazy" />
+                <h4>Identificador libros 2</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador mariposa"
+                 data-img="imgs/Manualidad-identificador-mariposa.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-mariposa.jpeg" alt="Manualidad identificador mariposa" loading="lazy" />
+                <h4>Identificador mariposa</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador morena"
+                 data-img="imgs/Manualidad-identificador-morena.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-morena.jpeg" alt="Manualidad identificador morena" loading="lazy" />
+                <h4>Identificador morena</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador mono"
+                 data-img="imgs/Manualidad-identificador-mono.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-mono.jpeg" alt="Manualidad identificador mono" loading="lazy" />
+                <h4>Identificador mono</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador nave"
+                 data-img="imgs/Manualidad-identificador-nave.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-nave.jpeg" alt="Manualidad identificador nave" loading="lazy" />
+                <h4>Identificador nave</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador nina"
+                 data-img="imgs/Manualidad-identificador-nina.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-nina.jpeg" alt="Manualidad identificador nina" loading="lazy" />
+                <h4>Identificador nina</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador nina 2"
+                 data-img="imgs/Manualidad-identificador-nina2.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-nina2.jpeg" alt="Manualidad identificador nina 2" loading="lazy" />
+                <h4>Identificador nina 2</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador ninos"
+                 data-img="imgs/Manualidad-identificador-ninos.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-ninos.jpeg" alt="Manualidad identificador ninos" loading="lazy" />
+                <h4>Identificador ninos</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador oceano"
+                 data-img="imgs/Manualidad-identificador-oceano.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-oceano.jpeg" alt="Manualidad identificador oceano" loading="lazy" />
+                <h4>Identificador oceano</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador osito"
+                 data-img="imgs/Manualidad-identificador-osito.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-osito.jpeg" alt="Manualidad identificador osito" loading="lazy" />
+                <h4>Identificador osito</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador pajarito"
+                 data-img="imgs/Manualidad-identificador-pajarito.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-pajarito.jpeg" alt="Manualidad identificador pajarito" loading="lazy" />
+                <h4>Identificador pajarito</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador traje espacial"
+                 data-img="imgs/Manualidad-identificador-trajeEspaial.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-trajeEspaial.jpeg" alt="Manualidad identificador traje espacial" loading="lazy" />
+                <h4>Identificador traje espacial</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador zoo"
+                 data-img="imgs/Manualidad-identificador-zoo.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-zoo.jpeg" alt="Manualidad identificador zoo" loading="lazy" />
+                <h4>Identificador zoo</h4>
+            </div>
+            <div class="card"
+                 data-nombre="Identificador zoo 2"
+                 data-img="imgs/Manualidad-identificador-zoo2.jpeg"
+                 data-precio="$10"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modalProducto">
+                <img src="imgs/Manualidad-identificador-zoo2.jpeg" alt="Manualidad identificador zoo 2" loading="lazy" />
+                <h4>Identificador zoo 2</h4>
+            </div>
+
         </section> <!-- fin de la sección de tarjetas -->
 
         <!-- Modal Bootstrap — se reutiliza para todas las tarjetas, JS pobla los datos al hacer clic -->
