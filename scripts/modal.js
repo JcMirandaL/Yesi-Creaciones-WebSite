@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Numero de WhatsApp del negocio — si cambia, se edita solo aca
     const WHATSAPP_NUM = "50763247221";
 
+    // Dominio de producción — se usa para generar links de compartir correctos
+    // En localhost (Live Server) window.location.href genera 127.0.0.1, asi que usamos este dominio fijo
+    const BASE_URL = "https://yesicreaciones.vercel.app/";
+
     // === POBLAR MODAL AL HACER CLIC EN UNA TARJETA ===
     // Selecciono todas las tarjetas que tengan data-bs-toggle="modal"
     // Esto funciona para cualquier cantidad de tarjetas sin modificar el JS
@@ -40,10 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
             modalLabel.textContent = nombre;       // titulo del modal
             modalPrecio.textContent = "Precio: " + precio;  // precio con prefijo centrado
 
-            // Genero el link de WhatsApp con un mensaje que incluye el nombre del producto
+            // Genero el link de WhatsApp con un mensaje que incluye el nombre del producto y la URL de la imagen
             // encodeURIComponent convierte espacios y caracteres especiales a formato URL
+            const imgFullUrl = BASE_URL + img;  // URL completa de la imagen en dominio de producción
             const msg = encodeURIComponent(
-                `Hola Yesi Creaciones, me interesa el producto "${nombre}". ¿Podrian darme mas informacion?`
+                `Hola Yesi Creaciones, me interesa el producto "${nombre}".\n\nMira la foto: ${imgFullUrl}`
             );
             modalWhatsApp.href = `https://wa.me/${WHATSAPP_NUM}?text=${msg}`;
         });
@@ -54,10 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
     modalCompartir.addEventListener("click", async () => {
         // Construyo los datos que se van a compartir
         const nombre = modalLabel.textContent;
+
+        // Obtengo solo el nombre del archivo actual (ej: "asistencia.html")
+        // window.location.pathname te da "/asistencia.html", split("/").pop() te da "asistencia.html"
+        const pagina = window.location.pathname.split("/").pop();
+        const pageUrl = BASE_URL + pagina;  // URL completa en dominio de producción
+
         const shareData = {
             title: `${nombre} - Yesi Creaciones`,
-            text: `Mira este producto de Yesi Creaciones: ${nombre}`,
-            url: window.location.href  // link a la pagina actual
+            text: `¿Qué te parece esta Manualidad? ¡Es de Yesi Creaciones! ✨: ${nombre}`,
+            url: pageUrl  // link a la pagina actual en dominio de producción
         };
 
         // navigator.share es la API nativa del navegador para compartir
@@ -73,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // navigator.clipboard.writeText es la API moderna para copiar texto
             try {
                 await navigator.clipboard.writeText(
-                    `${shareData.text} ${shareData.url}`
+                    `${shareData.text}`
                 );
                 // Cambio temporalmente el texto del boton para dar feedback visual
                 const original = modalCompartir.innerHTML;  // guardo el contenido original
